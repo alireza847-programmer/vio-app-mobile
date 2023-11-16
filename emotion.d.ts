@@ -1,5 +1,10 @@
 import '@emotion/react';
 
+interface FontProps {
+  fontFamily: string;
+  fontSize: number;
+}
+
 declare module '@emotion/react' {
   export interface Theme {
     colors: {

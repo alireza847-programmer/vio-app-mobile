@@ -17,7 +17,7 @@ const config = {
   resolver: {
     assetExts: assetExts.filter(ext => ext !== 'svg'),
     sourceExts: [...sourceExts, 'svg'],
+    resolverMainFields: ['sbmodern', 'react-native', 'browser', 'main'],
   },
 };
-
 module.exports = mergeConfig(defaultConfig, config);

@@ -8,7 +8,7 @@ const Fonts = {
   regular: 'Inter-Regular',
 };
 
-export const EmotionTheme: EmotionThemeType = {
+export const theme: EmotionThemeType = {
   colors: {
     backgroundColor: '#F2F2F2',
     textColor: {

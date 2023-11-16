@@ -5,6 +5,7 @@ module.exports = {
       'module-resolver',
       {
         alias: {
+          root: ['./src/'],
           components: './src/components',
           themes: './src/themes',
           utils: './src/utils',
@@ -13,8 +14,7 @@ module.exports = {
           pages: './src/pages',
           assets: './src/assets',
           layouts: './src/layouts',
-          translation: './src/translation',
-          hooks: './src/hooks',
+          stories: './src/stories',
         },
       },
     ],

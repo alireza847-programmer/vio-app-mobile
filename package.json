@@ -33,6 +33,7 @@
     "@storybook/addon-controls": "^6.5.16",
     "@storybook/addon-ondevice-actions": "^6.5.7",
     "@storybook/addon-ondevice-controls": "^6.5.7",
+    "@storybook/addon-ondevice-notes": "^6.5.7",
     "@storybook/react-native": "^6.5.7",
     "@tsconfig/react-native": "^3.0.0",
     "@types/react": "^18.0.24",
@@ -52,7 +53,7 @@
   },
   "engines": {
     "node": ">=16"
-  } ,
+  },
   "jest": {
     "moduleNameMapper": {
       "\\.svg": "<rootDir>/__mocks__/svgMock.js"
