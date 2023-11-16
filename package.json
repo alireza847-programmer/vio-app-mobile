@@ -9,10 +9,12 @@
     "start": "react-native start",
     "test": "jest",
     "storybook-generate": "sb-rn-get-stories",
-    "storybook-watch": "sb-rn-watcher" ,
+    "storybook-watch": "sb-rn-watcher",
     "storybook-metro": "react-native start --config ./.storybook/metro.storybook.js"
   },
   "dependencies": {
+    "@emotion/native": "^11.11.0",
+    "@emotion/react": "^11.11.1",
     "react": "18.2.0",
     "react-native": "0.72.7"
   },
