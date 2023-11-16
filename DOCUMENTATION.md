@@ -19,3 +19,19 @@ Storybook was chosen as the UI development environment for several reasons:
 In summary, Storybook was chosen to enhance the development workflow, improve collaboration, and ensure a high-quality and visually consistent user interface in our project.
 
 - [Storybook](./.storybook/DOC.md)
+
+## Using react-native-svg-transformer for Icon Customization
+
+### Introduction
+
+In our project, we leverage `react-native-svg-transformer` to enhance the customization of SVG icons. This library allows us to change icon colors dynamically and pass additional props easily.
+
+### Why react-native-svg-transformer?
+
+1. **Color Customization**: With `react-native-svg-transformer`, we can dynamically change the color of SVG icons. This is crucial for maintaining a consistent and visually appealing design across the application.
+
+2. **Additional Props**: The library allows us to pass additional props to SVG icons, enhancing their versatility. This is particularly useful when we need to customize the behavior of individual icons within different components.
+
+3. **Efficient Asset Handling**: `react-native-svg-transformer` efficiently handles SVG assets, ensuring optimal performance and reducing the app's overall size.
+
+You can find the configuration file at .svgrrc in the root of your project. This file is crucial for specifying how the SVG transformer should handle SVG files during the build process.
