@@ -36,6 +36,19 @@ const VTextMeta: ComponentMeta<typeof VText> = {
       range: true,
     },
   },
+  parameters: {
+    notes: `
+typography (optional): Specify the typography style for the text, choosing from 'bold21', 'medium15', 'semiBold16', 'semiBold18', 'regular16'.
+Default is 'medium15'
+
+color (optional): Set the color of the text. If not provided, it defaults to the primary text color from the theme.
+textAlign (optional): Define the text alignment. Options include 'center', 'auto', 'left', 'right', and 'justify'. Default is 'center'.
+
+marginTopRatio (optional): Adjust the top margin of the text based on a ratio. Default is 2.
+marginLeftRatio (optional): Adjust the left margin of the text based on a ratio. Default is 0.
+fullWidth (optional): Set the width of Component to 100%. Default is false.
+    `,
+  },
 };
 
 export default VTextMeta;
