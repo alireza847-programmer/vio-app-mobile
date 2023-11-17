@@ -48,6 +48,7 @@ try {
 
 const getStories = () => {
   return {
+    "./src/stories/VButton.stories.tsx": require("../src/stories/VButton.stories.tsx"),
     "./src/stories/VRow.stories.tsx": require("../src/stories/VRow.stories.tsx"),
     "./src/stories/VText.stories.tsx": require("../src/stories/VText.stories.tsx"),
   };

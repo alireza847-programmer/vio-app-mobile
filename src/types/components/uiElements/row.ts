@@ -15,11 +15,12 @@ export type FlexAlignType =
 
 export interface RowProps {
   justifyContent?: JustifyModes;
-  alignItems: FlexAlignType;
+  alignItems?: FlexAlignType;
   backgroundColor?: string;
   fullWidth?: boolean;
   marginTopRatio?: number;
   marginLeftRatio?: number;
   paddingHorizontalRatio?: number;
   paddingVerticalRatio?: number;
+  marginRighRatio?: number;
 }

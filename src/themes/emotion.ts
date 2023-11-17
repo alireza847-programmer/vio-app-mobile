@@ -17,12 +17,13 @@ export const theme: EmotionThemeType = {
       button: {
         primary: '#FFFFFF',
         secondary: '#0071F3',
-        error: '#D83B3B',
+        error: '#FFFFFF',
       },
     },
     button: {
       primary: '#0071F3',
       secondary: '#F7FBFF',
+      error: '#D83B3B',
     },
     stroke: {
       button: '#DAE9FA',
