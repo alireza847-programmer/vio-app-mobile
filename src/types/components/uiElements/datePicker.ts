@@ -38,4 +38,6 @@ export interface VDatePickerProps {
   isMonthFirst?: boolean;
   disabledBeforeToday?: boolean;
   disabledAfterToday?: boolean;
+  visible: boolean;
+  onClose: () => void;
 }
