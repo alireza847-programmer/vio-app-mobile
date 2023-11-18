@@ -9,7 +9,7 @@ const Button = styled.TouchableOpacity<ButtonProps>(
     borderRadius: theme.radius * 2,
     borderColor: theme.colors.stroke.button,
     ...(styled === 'FULL_WIDTH' && {width: '100%'}),
-    ...(styled !== 'FULL_WIDTH' && {
+    ...(styled === 'CONTENT_SIZE' && {
       paddingHorizontal: theme.HorizontalRem * 4,
     }),
     ...(styled !== 'TEXT' && {backgroundColor: theme.colors.button[mode]}),

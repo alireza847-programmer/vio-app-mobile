@@ -12,6 +12,7 @@ const VButton = (props: VButtonProps) => {
     title,
     styled = 'FULL_WIDTH',
     icon,
+    rightIcon,
     onPress,
   } = props;
 
@@ -43,6 +44,11 @@ const VButton = (props: VButtonProps) => {
           marginTopRatio={0}>
           {subTitle}
         </VText>
+      )}
+      {rightIcon && (
+        <VRow {...(title && {marginLeftRatio: 2})} fullWidth={false}>
+          {rightIcon(renderContentColor())}
+        </VRow>
       )}
     </Button>
   );
