@@ -1,3 +1,5 @@
+import {DimensionValue} from 'react-native';
+
 export type JustifyModes =
   | 'center'
   | 'flex-start'
@@ -23,4 +25,5 @@ export interface RowProps {
   paddingHorizontalRatio?: number;
   paddingVerticalRatio?: number;
   marginRighRatio?: number;
+  minWidth?: DimensionValue;
 }
