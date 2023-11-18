@@ -28,9 +28,9 @@ export interface VDatePickerProps {
   pastYearRange?: number;
   futureYearRange?: number;
   locale?: LOCALE_TYPE;
-  startDate?: string;
-  endDate?: string;
-  onChange: (params: onChangeParams | any) => void;
+  startDate: string;
+  endDate: string;
+  onConfirm: (params: onChangeParams | any) => void;
   style?: Style;
   singleSelectMode?: boolean;
   initialNumToRender?: number;

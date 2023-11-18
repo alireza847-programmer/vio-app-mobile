@@ -26,15 +26,11 @@ const SelectCheckDate = (props: SelectCheckDateProps) => {
       endDate: getTomarrow(),
     },
   });
-  const onDatePickerChange = (params: DatePickerOnChangeData) => {
-    const {endDate} = params;
-    if (endDate) {
-      setDatePickerData({
-        visible: false,
-        data: params,
-      });
-      onSelect(params);
-    }
+  const onDatePickerConfirm = (params: DatePickerOnChangeData) => {
+    setDatePickerData(prevState => ({
+      visible: false,
+      data: params,
+    }));
   };
   return (
     <Fragment>
@@ -75,7 +71,9 @@ const SelectCheckDate = (props: SelectCheckDateProps) => {
       <VDatePicker
         onClose={() => setDatePickerData(data => ({...data, visible: false}))}
         visible={datePickerData.visible}
-        onChange={onDatePickerChange}
+        onConfirm={onDatePickerConfirm}
+        startDate={datePickerData.data.startDate}
+        endDate={datePickerData.data.endDate}
       />
     </Fragment>
   );

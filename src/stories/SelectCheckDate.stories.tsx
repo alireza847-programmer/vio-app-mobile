@@ -15,4 +15,6 @@ export const Basic: SelectCheckDateStory = args => (
   <SelectCheckDate {...args} />
 );
 
-Basic.args = {};
+Basic.args = {
+  onSelect(params) {},
+};

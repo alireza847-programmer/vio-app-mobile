@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {LayoutAnimation, TouchableOpacity, View} from 'react-native';
 import Calendar from 'react-native-calendar-range-picker';
 import {VDatePickerProps} from 'types/components/uiElements/datePicker';
@@ -10,7 +10,11 @@ import {DatePickerContainer, calenderStyle} from './style';
 import VButton from '../button';
 
 const VDatePicker = (props: VDatePickerProps) => {
-  const {visible, onClose, ...rest} = props;
+  const {visible, startDate, endDate, onClose, onConfirm, ...rest} = props;
+  const [date, setDate] = useState({
+    startDate: startDate,
+    endDate: endDate,
+  });
   useEffect(() => {
     LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
   }, [visible]);
@@ -29,6 +33,7 @@ const VDatePicker = (props: VDatePickerProps) => {
       )}
       <VRow fullWidth>
         <Calendar
+          onChange={setDate}
           style={calenderStyle}
           disabledBeforeToday
           pastYearRange={1}
@@ -38,7 +43,7 @@ const VDatePicker = (props: VDatePickerProps) => {
       </VRow>
       {visible && (
         <VRow fullWidth>
-          <VButton onPress={() => {}} title="CONFIRM" />
+          <VButton onPress={() => onConfirm(date)} title="CONFIRM" />
         </VRow>
       )}
     </DatePickerContainer>
