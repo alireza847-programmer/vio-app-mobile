@@ -48,7 +48,9 @@ try {
 
 const getStories = () => {
   return {
+    "./src/stories/SelectCheckDate.stories.tsx": require("../src/stories/SelectCheckDate.stories.tsx"),
     "./src/stories/VButton.stories.tsx": require("../src/stories/VButton.stories.tsx"),
+    "./src/stories/VDatePicker.stories.tsx": require("../src/stories/VDatePicker.stories.tsx"),
     "./src/stories/VInput.stories.tsx": require("../src/stories/VInput.stories.tsx"),
     "./src/stories/VRow.stories.tsx": require("../src/stories/VRow.stories.tsx"),
     "./src/stories/VText.stories.tsx": require("../src/stories/VText.stories.tsx"),

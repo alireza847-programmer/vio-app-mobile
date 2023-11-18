@@ -4,6 +4,7 @@
 // import React from 'react';
 // import {SafeAreaView, StyleSheet, View} from 'react-native';
 // import {theme} from 'themes/emotion';
+import {Platform, UIManager} from 'react-native';
 
 // const App = () => {
 //   return (
@@ -24,5 +25,10 @@
 //     backgroundColor: theme.colors.backgroundColor,
 //   },
 // });
+if (Platform.OS === 'android') {
+  if (UIManager.setLayoutAnimationEnabledExperimental) {
+    UIManager.setLayoutAnimationEnabledExperimental(true);
+  }
+}
 
 export {default} from './.storybook';

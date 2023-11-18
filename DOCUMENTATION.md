@@ -35,3 +35,28 @@ In our project, we leverage `react-native-svg-transformer` to enhance the custom
 3. **Efficient Asset Handling**: `react-native-svg-transformer` efficiently handles SVG assets, ensuring optimal performance and reducing the app's overall size.
 
 You can find the configuration file at .svgrrc in the root of your project. This file is crucial for specifying how the SVG transformer should handle SVG files during the build process.
+
+# Using `dayjs` Library in the Project
+
+## Overview
+
+The `dayjs` library has been incorporated into the project as an alternative to `moment`. This decision was made with a focus on reducing the project's size, as `dayjs` offers a similar feature set but with a smaller footprint.
+
+## Why `dayjs`?
+
+1. **Size Considerations**: The size of the final bundle is a crucial factor in mobile applications. By opting for `dayjs` over `moment`, we can achieve a smaller bundle size, contributing to faster loading times for the application.
+
+2. **Similar API**: `dayjs` provides an API that is very similar to `moment`, making it a convenient replacement. This ensures that existing date and time manipulation logic can be easily adapted with minimal code changes.
+
+3. **Performance**: `dayjs` is designed to be fast and efficient, suitable for use in performance-sensitive environments such as mobile applications.
+
+## Example
+
+```jsx
+import dayjs from 'dayjs';
+
+const today = dayjs();
+const formattedDate = today.format('YYYY-MM-DD');
+
+console.log(`Today's date: ${formattedDate}`);
+```
