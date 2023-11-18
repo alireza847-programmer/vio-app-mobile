@@ -4,20 +4,20 @@ import {TextProps} from 'types/components/uiElements/text';
 const VText = styled.Text<TextProps>(
   ({
     theme,
-    textAlign,
-    typography,
+    textAlign = 'center',
+    typography = 'medium15',
     color = theme.colors.textColor.primary,
     marginTopRatio = 2,
     marginLeftRatio = 0,
     fullWidth = false,
   }) => ({
-    fontFamily: theme.fonts[typography || 'medium15'].fontFamily,
-    fontSize: theme.fonts[typography || 'medium15'].fontSize,
     color: color,
-    textAlign: textAlign || 'center',
+    textAlign: textAlign,
     marginTop: theme.verticalRem * marginTopRatio,
     marginLeft: theme.verticalRem * marginLeftRatio,
     ...(fullWidth && {width: '100%'}),
+    ...theme.fonts[typography],
+    textAlignVertical: 'center',
   }),
 );
 
