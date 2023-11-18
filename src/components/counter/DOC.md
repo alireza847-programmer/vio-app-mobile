@@ -2,8 +2,6 @@
 
 The `VCounter` component is a simple counter component implemented in React Native. It allows users to increase or decrease a numeric value with the help of plus and minus buttons.
 
-```
-
 ## Usage
 
 ```jsx
