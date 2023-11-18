@@ -35,13 +35,15 @@ const VButton = (props: VButtonProps) => {
         marginTopRatio={0}>
         {title}
       </VText>
-      <VText
-        typography="regular16"
-        color={renderContentColor()}
-        marginLeftRatio={1.2}
-        marginTopRatio={0}>
-        {subTitle}
-      </VText>
+      {subTitle && (
+        <VText
+          typography="regular16"
+          color={renderContentColor()}
+          marginLeftRatio={1.2}
+          marginTopRatio={0}>
+          {subTitle}
+        </VText>
+      )}
     </Button>
   );
 };
