@@ -14,6 +14,7 @@ const VRow = styled.View<PropsWithChildren<RowProps>>(
     paddingHorizontalRatio = 0,
     paddingVerticalRatio = 0,
     marginRighRatio = 0,
+    minWidth,
   }) => ({
     flexDirection: 'row',
     justifyContent,
@@ -25,6 +26,7 @@ const VRow = styled.View<PropsWithChildren<RowProps>>(
     paddingVertical: theme.verticalRem * paddingVerticalRatio,
     ...(backgroundColor && {backgroundColor}),
     ...(fullWidth && {width: '100%'}),
+    ...(minWidth && {minWidth}),
   }),
 );
 
