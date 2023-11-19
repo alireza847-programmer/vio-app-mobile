@@ -1,5 +1,5 @@
 export interface SelectCheckDateProps {
-  onSelect: (params: DatePickerOnChangeData) => void;
+  onConfirm: (params: DatePickerOnChangeData) => void;
 }
 
 export interface DatePickerOnChangeData {

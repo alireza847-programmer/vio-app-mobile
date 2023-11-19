@@ -11,14 +11,14 @@ import VRow from 'components/uiElements/row';
 import {ChevronSvg} from 'assets/svgs';
 import VDatePicker from 'components/uiElements/datePicker';
 import {
+  formatDate,
   formatDateToCheckInCheckoutFormat,
   getToday,
   getTomarrow,
 } from 'utils/helpers/date';
-import dayjs from 'dayjs';
 
 const SelectCheckDate = (props: SelectCheckDateProps) => {
-  const {onSelect} = props;
+  const {onConfirm} = props;
   const [datePickerData, setDatePickerData] = useState<DatePickerStateData>({
     visible: false,
     data: {
@@ -29,8 +29,15 @@ const SelectCheckDate = (props: SelectCheckDateProps) => {
   const onDatePickerConfirm = (params: DatePickerOnChangeData) => {
     setDatePickerData(prevState => ({
       visible: false,
-      data: params,
+      data: {
+        endDate: formatDate(params.endDate, 'YYYY-MM-DD'),
+        startDate: formatDate(params.startDate, 'YYYY-MM-DD'),
+      },
     }));
+    onConfirm({
+      endDate: formatDate(params.endDate, 'YYYY-MM-DD'),
+      startDate: formatDate(params.startDate, 'YYYY-MM-DD'),
+    });
   };
   return (
     <Fragment>
@@ -41,6 +48,7 @@ const SelectCheckDate = (props: SelectCheckDateProps) => {
           paddingVerticalRatio={4}>
           <VText marginTopRatio={0}>Check In</VText>
           <Button
+            testID="check-in-button"
             rightIcon={fill => <ChevronSvg fill={fill} />}
             onPress={() =>
               setDatePickerData(data => ({...data, visible: true}))
@@ -57,6 +65,7 @@ const SelectCheckDate = (props: SelectCheckDateProps) => {
           paddingVerticalRatio={4}>
           <VText marginTopRatio={0}>Check Out</VText>
           <Button
+            testID="check-out-button"
             rightIcon={fill => <ChevronSvg fill={fill} />}
             onPress={() =>
               setDatePickerData(data => ({...data, visible: true}))

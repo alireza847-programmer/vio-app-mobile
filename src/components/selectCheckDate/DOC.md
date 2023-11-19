@@ -15,13 +15,13 @@ The `SelectCheckDate` component is designed to enable users to conveniently choo
        // Your logic with the selected date range
      };
 
-     return <SelectCheckDate onSelect={handleDateSelect} />;
+     return <SelectCheckDate onConfirm={handleDateSelect} />;
    };
    ```
 
 3. **Props**:
 
-   - `onSelect` (required): Callback function that receives the selected date range as an object with `startDate` and `endDate` properties.
+   - `onConfirm` (required): Callback function that receives the selected date range as an object with `startDate` and `endDate` properties.
 
 4. **Example**:
 
@@ -35,7 +35,7 @@ The `SelectCheckDate` component is designed to enable users to conveniently choo
        // Your logic with the selected date range
      };
 
-     return <SelectCheckDate onSelect={handleDateSelect} />;
+     return <SelectCheckDate onConfirm={handleDateSelect} />;
    };
 
    export default YourComponent;
@@ -43,7 +43,7 @@ The `SelectCheckDate` component is designed to enable users to conveniently choo
 
 ## Note
 
-- The `onSelect` callback provides the selected date range in the following format:
+- The `onConfirm` callback provides the selected date range in the following format:
 
   ```javascript
   {
