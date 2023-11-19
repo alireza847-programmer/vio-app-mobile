@@ -9,4 +9,5 @@ export interface VButtonProps extends ButtonProps {
   rightIcon?: (fill: string) => JSX.Element;
   subTitle?: string;
   onPress: () => void;
+  testID?: string;
 }
