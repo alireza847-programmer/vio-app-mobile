@@ -15,7 +15,7 @@ export type FlexAlignType =
   | 'stretch'
   | 'baseline';
 
-export interface RowProps {
+export interface VRowProps {
   justifyContent?: JustifyModes;
   alignItems?: FlexAlignType;
   backgroundColor?: string;

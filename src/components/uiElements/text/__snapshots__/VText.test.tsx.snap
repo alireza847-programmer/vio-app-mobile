@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VText component matches snapshot with center alignment 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#2A333D",
+        "fontFamily": "Inter-Medium",
+        "fontSize": 15,
+        "marginLeft": 0,
+        "marginTop": 13.34,
+        "textAlign": "center",
+        "textAlignVertical": "center",
+      },
+      undefined,
+    ]
+  }
+  textAlign="center"
+>
+  Centered Text
+</Text>
+`;
+
+exports[`VText component matches snapshot with custom margin and padding ratios 1`] = `
+<Text
+  fullWidth={true}
+  marginLeftRatio={2}
+  marginTopRatio={1}
+  style={
+    [
+      {
+        "color": "#2A333D",
+        "fontFamily": "Inter-Medium",
+        "fontSize": 15,
+        "marginLeft": 13.34,
+        "marginTop": 6.67,
+        "textAlign": "center",
+        "textAlignVertical": "center",
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  Custom Margins
+</Text>
+`;
+
+exports[`VText component matches snapshot with custom typography 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#2A333D",
+        "fontFamily": "Inter-Bold",
+        "fontSize": 21,
+        "marginLeft": 0,
+        "marginTop": 13.34,
+        "textAlign": "center",
+        "textAlignVertical": "center",
+      },
+      undefined,
+    ]
+  }
+  typography="bold21"
+>
+  Bold Text
+</Text>
+`;
+
+exports[`VText component matches snapshot with default props 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#2A333D",
+        "fontFamily": "Inter-Medium",
+        "fontSize": 15,
+        "marginLeft": 0,
+        "marginTop": 13.34,
+        "textAlign": "center",
+        "textAlignVertical": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  Hello, VText!
+</Text>
+`;
+
+exports[`VText component matches snapshot with fullWidth prop 1`] = `
+<Text
+  fullWidth={true}
+  style={
+    [
+      {
+        "color": "#2A333D",
+        "fontFamily": "Inter-Medium",
+        "fontSize": 15,
+        "marginLeft": 0,
+        "marginTop": 13.34,
+        "textAlign": "center",
+        "textAlignVertical": "center",
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  Full Width Text
+</Text>
+`;

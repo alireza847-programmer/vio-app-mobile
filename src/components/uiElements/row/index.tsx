@@ -1,8 +1,8 @@
 import styled from '@emotion/native';
 import {PropsWithChildren} from 'react';
-import {RowProps} from 'types/components/uiElements/row';
+import {VRowProps} from 'types/components/uiElements/row';
 
-const VRow = styled.View<PropsWithChildren<RowProps>>(
+const VRow = styled.View<PropsWithChildren<VRowProps>>(
   ({
     theme,
     backgroundColor,
