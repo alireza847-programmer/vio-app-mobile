@@ -52,6 +52,7 @@ const getStories = () => {
     "./src/stories/VButton.stories.tsx": require("../src/stories/VButton.stories.tsx"),
     "./src/stories/VCounter.stories.tsx": require("../src/stories/VCounter.stories.tsx"),
     "./src/stories/VDatePicker.stories.tsx": require("../src/stories/VDatePicker.stories.tsx"),
+    "./src/stories/VDropDown.stories.tsx": require("../src/stories/VDropDown.stories.tsx"),
     "./src/stories/VInput.stories.tsx": require("../src/stories/VInput.stories.tsx"),
     "./src/stories/VRow.stories.tsx": require("../src/stories/VRow.stories.tsx"),
     "./src/stories/VText.stories.tsx": require("../src/stories/VText.stories.tsx"),
