@@ -8,15 +8,19 @@ const VDropDownMeta: ComponentMeta<typeof VDropDown> = {
 
 export default VDropDownMeta;
 
-type VCounterStory = ComponentStory<typeof VDropDown>;
+type VDropDownStory = ComponentStory<typeof VDropDown>;
 
-export const Basic: VCounterStory = args => <VDropDown {...args} />;
+export const Basic: VDropDownStory = args => <VDropDown {...args} />;
 
 Basic.args = {
   data: new Array(16).fill(0).map((item, index) => {
     return {
-      label: index,
+      // label: index,
+      // value: index,
+      label: index.toString(),
       value: index,
     };
   }),
+  placeHolder: 'Age',
+  onChange(value) {},
 };
