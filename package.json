@@ -39,6 +39,7 @@
     "@storybook/addon-ondevice-controls": "^6.5.7",
     "@storybook/addon-ondevice-notes": "^6.5.7",
     "@storybook/react-native": "^6.5.7",
+    "@testing-library/react-native": "^12.4.0",
     "@tsconfig/react-native": "^3.0.0",
     "@types/react": "^18.0.24",
     "@types/react-test-renderer": "^18.0.0",
