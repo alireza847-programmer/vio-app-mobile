@@ -14,6 +14,7 @@ const VButton = (props: VButtonProps) => {
     icon,
     rightIcon,
     onPress,
+    testID,
   } = props;
 
   const renderContentColor = () => {
@@ -24,7 +25,12 @@ const VButton = (props: VButtonProps) => {
   };
 
   return (
-    <Button activeOpacity={0.8} onPress={onPress} styled={styled} mode={mode}>
+    <Button
+      testID={testID}
+      activeOpacity={0.8}
+      onPress={onPress}
+      styled={styled}
+      mode={mode}>
       {icon && (
         <VRow {...(title && {marginRighRatio: 2})} fullWidth={false}>
           {icon(renderContentColor())}
