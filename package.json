@@ -8,6 +8,7 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
+    "jest-update-snapshot": "jest --updateSnapshot",
     "storybook-generate": "sb-rn-get-stories",
     "storybook-watch": "sb-rn-watcher",
     "storybook-metro": "react-native start --config ./.storybook/metro.storybook.js"
