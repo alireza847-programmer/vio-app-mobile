@@ -1,5 +1,10 @@
 import dayjs from 'dayjs';
-import {getToday, getTomarrow, formatDateToCheckInCheckoutFormat} from './date';
+import {
+  getToday,
+  getTomarrow,
+  formatDateToCheckInCheckoutFormat,
+  formatDate,
+} from './date';
 import {it, describe, expect} from '@jest/globals';
 
 describe('Date Utils', () => {
@@ -34,6 +39,15 @@ describe('Date Utils', () => {
       const inputDate = '2023-01-01';
       const formattedDate = formatDateToCheckInCheckoutFormat(inputDate);
       expect(formattedDate).toBe(dayjs(inputDate).format('ddd, MMM DD'));
+    });
+  });
+
+  describe('format Date', () => {
+    it('should return correct date in the specified format', () => {
+      const format = 'YYYY-MM-DD';
+      const today = getToday();
+      const formattedDate = formatDate(today, format);
+      expect(formattedDate).toBe(dayjs().format(format));
     });
   });
 });
