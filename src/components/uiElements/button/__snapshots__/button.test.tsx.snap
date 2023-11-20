@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VButton component matches snapshot with custom icon and rightIcon 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#0071F3",
+      "borderColor": "#DAE9FA",
+      "borderRadius": 15,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingVertical": 26.68,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    fullWidth={false}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "marginLeft": 0,
+          "marginRight": 0,
+          "marginTop": 0,
+          "paddingHorizontal": 0,
+          "paddingVertical": 0,
+        },
+        undefined,
+      ]
+    }
+  >
+    <svg>
+      Mock Icon
+    </svg>
+  </View>
+  <Text
+    color="#FFFFFF"
+    marginTopRatio={0}
+    style={
+      [
+        {
+          "color": "#FFFFFF",
+          "fontFamily": "Inter-SemiBold",
+          "fontSize": 16,
+          "marginLeft": 0,
+          "marginTop": 0,
+          "textAlign": "center",
+          "textAlignVertical": "center",
+        },
+        undefined,
+      ]
+    }
+    typography="semiBold16"
+  />
+  <View
+    fullWidth={false}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "marginLeft": 0,
+          "marginRight": 0,
+          "marginTop": 0,
+          "paddingHorizontal": 0,
+          "paddingVertical": 0,
+        },
+        undefined,
+      ]
+    }
+  >
+    <svg>
+      Mock Icon
+    </svg>
+  </View>
+</View>
+`;
+
+exports[`VButton component matches snapshot with custom styled prop 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#0071F3",
+      "borderColor": "#DAE9FA",
+      "borderRadius": 15,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingHorizontal": 30,
+      "paddingVertical": 26.68,
+    }
+  }
+>
+  <Text
+    color="#FFFFFF"
+    marginTopRatio={0}
+    style={
+      [
+        {
+          "color": "#FFFFFF",
+          "fontFamily": "Inter-SemiBold",
+          "fontSize": 16,
+          "marginLeft": 0,
+          "marginTop": 0,
+          "textAlign": "center",
+          "textAlignVertical": "center",
+        },
+        undefined,
+      ]
+    }
+    typography="semiBold16"
+  >
+    Click Me
+  </Text>
+</View>
+`;
+
+exports[`VButton component matches snapshot with custom title and mode 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#F7FBFF",
+      "borderColor": "#DAE9FA",
+      "borderRadius": 15,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingVertical": 26.68,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    color="#0071F3"
+    marginTopRatio={0}
+    style={
+      [
+        {
+          "color": "#0071F3",
+          "fontFamily": "Inter-SemiBold",
+          "fontSize": 16,
+          "marginLeft": 0,
+          "marginTop": 0,
+          "textAlign": "center",
+          "textAlignVertical": "center",
+        },
+        undefined,
+      ]
+    }
+    typography="semiBold16"
+  >
+    Click me
+  </Text>
+</View>
+`;
+
+exports[`VButton component matches snapshot with default props 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#0071F3",
+      "borderColor": "#DAE9FA",
+      "borderRadius": 15,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingVertical": 26.68,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    color="#FFFFFF"
+    marginTopRatio={0}
+    style={
+      [
+        {
+          "color": "#FFFFFF",
+          "fontFamily": "Inter-SemiBold",
+          "fontSize": 16,
+          "marginLeft": 0,
+          "marginTop": 0,
+          "textAlign": "center",
+          "textAlignVertical": "center",
+        },
+        undefined,
+      ]
+    }
+    typography="semiBold16"
+  />
+</View>
+`;

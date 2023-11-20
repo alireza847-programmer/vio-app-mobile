@@ -6,30 +6,31 @@ import {
   addParameters,
   addArgsEnhancer,
   clearDecorators,
-} from '@storybook/react-native';
+} from "@storybook/react-native";
 
 global.STORIES = [
   {
-    titlePrefix: '',
-    directory: './.storybook/stories',
-    files: '**/*.stories.?(ts|tsx|js|jsx)',
+    titlePrefix: "",
+    directory: "./src/stories",
+    files: "*.stories.?(ts|tsx|js|jsx)",
     importPathMatcher:
-      '^\\.[\\\\/](?:\\.storybook\\/stories(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.stories\\.(?:ts|tsx|js|jsx)?)$',
+      "^\\.[\\\\/](?:src\\/stories\\/(?!\\.)(?=.)[^/]*?\\.stories\\.(?:ts|tsx|js|jsx)?)$",
   },
 ];
 
-import '@storybook/addon-ondevice-controls/register';
-import '@storybook/addon-ondevice-actions/register';
+import "@storybook/addon-ondevice-controls/register";
+import "@storybook/addon-ondevice-actions/register";
+import "@storybook/addon-ondevice-notes/register";
 
-import { argsEnhancers } from '@storybook/addon-actions/dist/modern/preset/addArgs';
+import { argsEnhancers } from "@storybook/addon-actions/dist/modern/preset/addArgs";
 
-import { decorators, parameters } from './preview';
+import { decorators, parameters } from "./preview";
 
 if (decorators) {
   if (__DEV__) {
     // stops the warning from showing on every HMR
-    require('react-native').LogBox.ignoreLogs([
-      '`clearDecorators` is deprecated and will be removed in Storybook 7.0',
+    require("react-native").LogBox.ignoreLogs([
+      "`clearDecorators` is deprecated and will be removed in Storybook 7.0",
     ]);
   }
   // workaround for global decorators getting infinitely applied on HMR, see https://github.com/storybookjs/react-native/issues/185
@@ -47,7 +48,14 @@ try {
 
 const getStories = () => {
   return {
-    './.storybook/stories/Button/Button.stories.js': require('./stories/Button/Button.stories.js'),
+    "./src/stories/SelectCheckDate.stories.tsx": require("../src/stories/SelectCheckDate.stories.tsx"),
+    "./src/stories/VButton.stories.tsx": require("../src/stories/VButton.stories.tsx"),
+    "./src/stories/VCounter.stories.tsx": require("../src/stories/VCounter.stories.tsx"),
+    "./src/stories/VDatePicker.stories.tsx": require("../src/stories/VDatePicker.stories.tsx"),
+    "./src/stories/VDropDown.stories.tsx": require("../src/stories/VDropDown.stories.tsx"),
+    "./src/stories/VInput.stories.tsx": require("../src/stories/VInput.stories.tsx"),
+    "./src/stories/VRow.stories.tsx": require("../src/stories/VRow.stories.tsx"),
+    "./src/stories/VText.stories.tsx": require("../src/stories/VText.stories.tsx"),
   };
 };
 
