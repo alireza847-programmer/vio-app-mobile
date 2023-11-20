@@ -10,4 +10,5 @@ export interface VButtonProps extends ButtonProps {
   subTitle?: string;
   onPress: () => void;
   testID?: string;
+  disabled?: boolean;
 }

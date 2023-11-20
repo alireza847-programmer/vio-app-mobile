@@ -1,9 +1,8 @@
 import styled from '@emotion/native';
+import {hp, wp} from 'utils/dimensions';
 
 export const DatePickerContainer = styled.View(({theme}) => ({
-  position: 'absolute',
   width: '100%',
-  height: 'auto',
 }));
 
 export const calenderStyle = {

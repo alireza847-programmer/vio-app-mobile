@@ -2,7 +2,7 @@ import styled from '@emotion/native';
 import {ButtonProps} from 'types/components/uiElements/button';
 
 const Button = styled.TouchableOpacity<ButtonProps>(
-  ({theme, mode = 'primary', styled = 'FULL_WIDTH'}) => ({
+  ({theme, mode = 'primary', styled = 'FULL_WIDTH', disabled}) => ({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -16,6 +16,8 @@ const Button = styled.TouchableOpacity<ButtonProps>(
       paddingVertical: theme.verticalRem * 4,
     }),
     ...(styled !== 'TEXT' && {backgroundColor: theme.colors.button[mode]}),
+    ...(styled !== 'TEXT' &&
+      disabled && {backgroundColor: theme.colors.button.disabled}),
     ...(mode === 'secondary' && styled !== 'TEXT' && {borderWidth: 1}),
   }),
 );

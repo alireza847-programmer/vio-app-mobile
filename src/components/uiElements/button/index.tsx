@@ -15,6 +15,7 @@ const VButton = (props: VButtonProps) => {
     rightIcon,
     onPress,
     testID,
+    disabled = false,
   } = props;
 
   const renderContentColor = () => {
@@ -26,6 +27,7 @@ const VButton = (props: VButtonProps) => {
 
   return (
     <Button
+      disabled={disabled}
       testID={testID}
       activeOpacity={0.8}
       onPress={onPress}

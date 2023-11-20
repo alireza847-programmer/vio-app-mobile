@@ -13,6 +13,8 @@ const VRow = styled.View<PropsWithChildren<VRowProps>>(
     marginLeftRatio = 0,
     paddingHorizontalRatio = 0,
     paddingVerticalRatio = 0,
+    paddingLeftRatio = 0,
+    paddingRightRatio = 0,
     marginRighRatio = 0,
     minWidth,
   }) => ({
@@ -24,6 +26,12 @@ const VRow = styled.View<PropsWithChildren<VRowProps>>(
     marginRight: theme.HorizontalRem * marginRighRatio,
     paddingHorizontal: theme.HorizontalRem * paddingHorizontalRatio,
     paddingVertical: theme.verticalRem * paddingVerticalRatio,
+    ...(paddingLeftRatio && {
+      paddingLeft: theme.HorizontalRem * paddingLeftRatio,
+    }),
+    ...(paddingRightRatio && {
+      paddingRight: theme.HorizontalRem * paddingRightRatio,
+    }),
     ...(backgroundColor && {backgroundColor}),
     ...(fullWidth && {width: '100%'}),
     ...(minWidth && {minWidth}),

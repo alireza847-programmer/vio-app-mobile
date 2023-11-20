@@ -10,7 +10,7 @@ const Fonts = {
 
 export const theme: EmotionThemeType = {
   colors: {
-    backgroundColor: '#F2F2F2',
+    backgroundColor: '#fff',
     textColor: {
       primary: '#2A333D',
       placeHolder: '#A3ACB8',
@@ -24,6 +24,7 @@ export const theme: EmotionThemeType = {
       primary: '#0071F3',
       secondary: '#F7FBFF',
       error: '#D83B3B',
+      disabled: '#A3ACB8',
     },
     stroke: {
       button: '#DAE9FA',

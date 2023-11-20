@@ -18,7 +18,7 @@ import {
 } from 'utils/helpers/date';
 
 const SelectCheckDate = (props: SelectCheckDateProps) => {
-  const {onConfirm} = props;
+  const {onConfirm = params => params} = props;
   const [datePickerData, setDatePickerData] = useState<DatePickerStateData>({
     visible: false,
     data: {
@@ -81,8 +81,8 @@ const SelectCheckDate = (props: SelectCheckDateProps) => {
         onClose={() => setDatePickerData(data => ({...data, visible: false}))}
         visible={datePickerData.visible}
         onConfirm={onDatePickerConfirm}
-        startDate={datePickerData.data.startDate}
-        endDate={datePickerData.data.endDate}
+        startDate={formatDate(datePickerData.data.startDate)}
+        endDate={formatDate(datePickerData.data.endDate)}
       />
     </Fragment>
   );
