@@ -15,6 +15,7 @@ module.exports = {
           assets: './src/assets',
           layouts: './src/layouts',
           stories: './src/stories',
+          locales: './src/locales',
         },
       },
     ],
