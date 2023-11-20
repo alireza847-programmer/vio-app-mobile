@@ -18,6 +18,8 @@ export interface EmotionThemeType {
     button: {
       primary: string;
       secondary: string;
+      error: string;
+      disabled: string;
     };
     stroke: {
       button: string;
