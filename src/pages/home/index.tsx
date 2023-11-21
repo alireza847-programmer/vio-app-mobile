@@ -8,8 +8,15 @@ import VRow from 'components/uiElements/row';
 import {RoomInput} from './style';
 import VButton from 'components/uiElements/button';
 import {PencilEditButton} from 'assets/svgs';
+import {getTotalGuests, parseDeepLink} from 'utils/helpers/deepLink';
+import {GUEST_PAGE} from 'routes/const';
+import {useAppNavigation} from 'hooks/navigation';
+import {useRoomsStore} from 'stores/rooms';
 
 const HomePage = () => {
+  const navigation = useAppNavigation();
+  const rooms = useRoomsStore(state => state.rooms);
+
   return (
     <MainLayout withClose={false} withHeader withLogo>
       <VText marginTopRatio={5} typography="bold21">
@@ -25,12 +32,18 @@ const HomePage = () => {
         paddingLeftRatio={4}
         justifyContent="space-between"
         paddingRightRatio={2}>
-        <VText>6 Guests, 2 Rooms</VText>
+        <VText>
+          {`${getTotalGuests(rooms)} Guests, ${rooms.length || 1} Rooms`}
+        </VText>
         <VButton
-          icon={fill => <PencilEditButton fill={fill} />}
+          icon={fill => (
+            <VRow justifyContent="center" fullWidth width={24} height={24}>
+              <PencilEditButton fill={fill} />
+            </VRow>
+          )}
           styled="CONTENT_SIZE"
           mode="secondary"
-          onPress={() => {}}
+          onPress={() => navigation.navigate(GUEST_PAGE)}
         />
       </RoomInput>
       <VRow marginTopRatio={4}>
