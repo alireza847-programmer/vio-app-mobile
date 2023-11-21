@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useRef} from 'react';
 import {ButtonsWrapper, Container, FlatListContainer} from './style';
 import {GuestPickerProps} from 'types/components/guestPicker';
 import Room from './room';
@@ -12,16 +12,20 @@ import {
   ifChildWithNanExists,
   parseArrayToDeepLink,
 } from 'utils/helpers/deepLink';
-import {ListRenderItem, View} from 'react-native';
+import {FlatList, ListRenderItem, View} from 'react-native';
 import VText from 'components/uiElements/text';
 
 const GuestPicker = (props: GuestPickerProps) => {
   const {initialData} = props;
+  const flatListRef = useRef<FlatList>(null);
   const addRoom = useRoomsStore(state => state.addRoom);
   const rooms = useRoomsStore(state => state.rooms);
   const renderItem: ListRenderItem<ParsedLinkItem> = ({item, index}) => (
     <Room index={index} item={item} />
   );
+  const onNewRoom = () => {
+    addRoom();
+  };
   return (
     <Container>
       <FlatListContainer
@@ -29,11 +33,15 @@ const GuestPicker = (props: GuestPickerProps) => {
         renderItem={renderItem}
         // @ts-ignore
         keyExtractor={item => item.id}
+        ref={flatListRef}
         showsVerticalScrollIndicator={false}
         data={initialData}
         contentContainerStyle={{
           paddingVertical: 24,
         }}
+        onContentSizeChange={(w, h) =>
+          flatListRef.current?.scrollToOffset({offset: h, animated: true})
+        }
         ListFooterComponent={() => {
           if (initialData.length > 7) {
             return (
@@ -46,7 +54,7 @@ const GuestPicker = (props: GuestPickerProps) => {
                 title="Add Room"
                 icon={fill => <PlusSvg fill={fill} />}
                 mode="secondary"
-                onPress={addRoom}
+                onPress={onNewRoom}
               />
             </VRow>
           );
