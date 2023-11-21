@@ -17,6 +17,8 @@ const VRow = styled.View<PropsWithChildren<VRowProps>>(
     paddingRightRatio = 0,
     marginRighRatio = 0,
     minWidth,
+    height,
+    width,
   }) => ({
     flexDirection: 'row',
     justifyContent,
@@ -35,6 +37,8 @@ const VRow = styled.View<PropsWithChildren<VRowProps>>(
     ...(backgroundColor && {backgroundColor}),
     ...(fullWidth && {width: '100%'}),
     ...(minWidth && {minWidth}),
+    ...(width && {width}),
+    ...(height && {height}),
   }),
 );
 

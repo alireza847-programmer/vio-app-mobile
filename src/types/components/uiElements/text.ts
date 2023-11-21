@@ -10,4 +10,5 @@ export interface TextProps {
   marginTopRatio?: number;
   marginLeftRatio?: number;
   fullWidth?: boolean;
+  width?: number;
 }

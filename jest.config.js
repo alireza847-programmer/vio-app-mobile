@@ -5,7 +5,7 @@ module.exports = {
   },
   setupFilesAfterEnv: ['./setup-jest.js'],
   transformIgnorePatterns: [
-    'node_modules/(?!(react-native-calendar-range-picker|react-native|@react-native|react-native-dropdown-picker)/)',
+    'node_modules/(?!(react-native-calendar-range-picker|react-native|@react-native|react-native-dropdown-picker|react-native-modal|react-native-animatable)/)',
   ],
   transform: {
     '^.+\\.(js|jsx|ts|tsx|mjs)$': 'babel-jest',

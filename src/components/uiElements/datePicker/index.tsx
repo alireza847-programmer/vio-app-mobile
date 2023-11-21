@@ -8,6 +8,7 @@ import Button from '../button/style';
 import {DatePickerContainer, calenderStyle} from './style';
 import VButton from '../button';
 import VModal from '../modal';
+import VText from '../text';
 
 const VDatePicker = (props: VDatePickerProps) => {
   const {
@@ -25,7 +26,7 @@ const VDatePicker = (props: VDatePickerProps) => {
   return (
     <VModal onClose={onClose} isVisible={visible}>
       <DatePickerContainer>
-        <VRow marginTopRatio={2}>
+        <VRow justifyContent="space-between" marginTopRatio={2}>
           <Button onPress={onClose} styled="TEXT">
             <CloseSvg
               width={24}
@@ -33,9 +34,16 @@ const VDatePicker = (props: VDatePickerProps) => {
               fill={theme.colors.button.primary}
             />
           </Button>
+          <VText typography="semiBold16">Check In & Out</VText>
+          <Button onPress={onClose} styled="TEXT">
+            <CloseSvg width={24} height={24} fill={'transparent'} />
+          </Button>
         </VRow>
         <VRow fullWidth>
           <Calendar
+            flatListProps={{
+              showsVerticalScrollIndicator: false,
+            }}
             onChange={setDate}
             style={calenderStyle}
             disabledBeforeToday

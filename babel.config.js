@@ -16,6 +16,8 @@ module.exports = {
           layouts: './src/layouts',
           stories: './src/stories',
           locales: './src/locales',
+          hooks: './src/hooks',
+          stores: './src/stores',
         },
       },
     ],

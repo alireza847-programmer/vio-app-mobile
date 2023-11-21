@@ -6,7 +6,7 @@ exports[`VButton component matches snapshot with custom icon and rightIcon 1`] =
     {
       "busy": undefined,
       "checked": undefined,
-      "disabled": undefined,
+      "disabled": false,
       "expanded": undefined,
       "selected": undefined,
     }
@@ -115,7 +115,7 @@ exports[`VButton component matches snapshot with custom styled prop 1`] = `
     {
       "busy": undefined,
       "checked": undefined,
-      "disabled": undefined,
+      "disabled": false,
       "expanded": undefined,
       "selected": undefined,
     }
@@ -182,7 +182,7 @@ exports[`VButton component matches snapshot with custom title and mode 1`] = `
     {
       "busy": undefined,
       "checked": undefined,
-      "disabled": undefined,
+      "disabled": false,
       "expanded": undefined,
       "selected": undefined,
     }
@@ -250,7 +250,7 @@ exports[`VButton component matches snapshot with default props 1`] = `
     {
       "busy": undefined,
       "checked": undefined,
-      "disabled": undefined,
+      "disabled": false,
       "expanded": undefined,
       "selected": undefined,
     }

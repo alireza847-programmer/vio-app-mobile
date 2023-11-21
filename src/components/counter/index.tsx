@@ -7,22 +7,29 @@ import {counterTextStyle} from './style';
 import {MinusSvg, PlusSvg} from 'assets/svgs';
 
 const VCounter = (props: VCounterProps) => {
-  const {initialNumber = 0, onChange} = props;
-  const [count, setCount] = useState(initialNumber);
+  const {initialNumber = 0, onChange, sumRule = true, minusRule = true} = props;
+  const [count, setCount] = useState(0);
   const onAction = (action: '-' | '+') => {
+    let value = count;
     if (action === '-') {
-      count && setCount(value => value - 1);
+      if (count && minusRule) {
+        value = value - 1;
+      }
     } else {
-      setCount(value => value + 1);
+      if (sumRule) {
+        value = value + 1;
+      }
     }
+    setCount(value);
+    value !== count && onChange(value);
   };
   useEffect(() => {
-    onChange(count);
-  }, [count]);
+    setCount(initialNumber);
+  }, [initialNumber]);
   return (
     <VRow
       testID="v-counter"
-      minWidth={'50%'}
+      minWidth={'38%'}
       justifyContent="space-between"
       fullWidth={false}>
       <VButton
@@ -31,6 +38,7 @@ const VCounter = (props: VCounterProps) => {
         styled="CONTENT_SIZE"
         icon={fill => <MinusSvg fill={fill} />}
         onPress={() => onAction('-')}
+        disabled={!minusRule}
       />
       <VText
         testID="count-text"
@@ -45,6 +53,7 @@ const VCounter = (props: VCounterProps) => {
         styled="CONTENT_SIZE"
         icon={fill => <PlusSvg fill={fill} />}
         onPress={() => onAction('+')}
+        disabled={!sumRule}
       />
     </VRow>
   );
