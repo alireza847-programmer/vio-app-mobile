@@ -15,7 +15,7 @@ const MyComponent = () => {
       justifyContent="flex-start"
       alignItems="center"
       backgroundColor="#f0f0f0"
-      fullWidth={true}
+      fullWidth
       marginTopRatio={2}
       marginLeftRatio={1}
       paddingHorizontalRatio={1}
@@ -28,18 +28,16 @@ const MyComponent = () => {
 
 ## Props
 
-justifyContent (optional): Control the horizontal alignment of child components. Options include 'center', 'flex-start', 'flex-end', 'space-between', 'space-around', and 'space-evenly'.
+- **justifyContent** (optional): Control the horizontal alignment of child components.
+- **alignItems** (required): Set the vertical alignment of child components.
+- **backgroundColor** (optional): Apply a background color to the row container.
+- **fullWidth** (optional, default: `true`): If set to true, the row will take up the full width of its parent container.
+- **marginTopRatio** (optional): Adjust the top margin of the row based on a ratio.
+- **marginLeftRatio** (optional): Adjust the left margin of the row based on a ratio.
+- **paddingHorizontalRatio** (optional): Adjust the horizontal padding of the row based on a ratio.
+- **paddingVerticalRatio** (optional): Adjust the vertical padding of the row based on a ratio.
+- **minWidth** (optional): Set a minimum width for the row.
+- **width** (optional): Set the width of the row.
+- **height** (optional): Set the height of the row.
 
-alignItems (required): Set the vertical alignment of child components. Options include 'flex-start', 'flex-end', 'center', 'stretch', and 'baseline'.
-
-backgroundColor (optional): Apply a background color to the row container.
-
-fullWidth (optional): If set to true, the row will take up the full width of its parent container. Default is true.
-
-marginTopRatio (optional): Adjust the top margin of the row based on a ratio.
-
-marginLeftRatio (optional): Adjust the left margin of the row based on a ratio.
-
-paddingHorizontalRatio (optional): Adjust the horizontal padding of the row based on a ratio.
-
-paddingVerticalRatio (optional): Adjust the vertical padding of the row based on a ratio.
+**Note**: Use either `paddingLeftRatio` and `paddingRightRatio` or `paddingHorizontalRatio` based on your preference.
