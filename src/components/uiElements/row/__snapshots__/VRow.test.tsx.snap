@@ -122,3 +122,126 @@ exports[`VRow component matches snapshot with fullWidth prop 1`] = `
   Full Width Row
 </View>
 `;
+
+exports[`VRow component should match snapshot with custom background color 1`] = `
+<View
+  backgroundColor="blue"
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "blue",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingHorizontal": 0,
+        "paddingVertical": 0,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  Blue Background
+</View>
+`;
+
+exports[`VRow component should match snapshot with custom minWidth 1`] = `
+<View
+  minWidth={150}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "minWidth": 150,
+        "paddingHorizontal": 0,
+        "paddingVertical": 0,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  Min Width Row
+</View>
+`;
+
+exports[`VRow component should match snapshot with custom styling and justifyContent 1`] = `
+<View
+  justifyContent="space-between"
+  marginLeftRatio={2}
+  marginTopRatio={1}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginLeft": 15,
+        "marginRight": 0,
+        "marginTop": 6.67,
+        "paddingHorizontal": 0,
+        "paddingVertical": 0,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  Custom Styling
+</View>
+`;
+
+exports[`VRow component should match snapshot with default props 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "marginLeft": NaN,
+        "marginRight": NaN,
+        "marginTop": NaN,
+        "paddingHorizontal": NaN,
+        "paddingVertical": NaN,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  Content goes here
+</View>
+`;
+
+exports[`VRow component should match snapshot with fullWidth prop 1`] = `
+<View
+  fullWidth={true}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingHorizontal": 0,
+        "paddingVertical": 0,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  Full Width Row
+</View>
+`;
