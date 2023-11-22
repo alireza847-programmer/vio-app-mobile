@@ -10,6 +10,7 @@ import {CloseSvg} from 'assets/svgs';
 import {theme} from 'themes/emotion';
 import {useRoomsStore} from 'stores/rooms';
 import {getTotalGuests, getTotalGuestsOfRoom} from 'utils/helpers/deepLink';
+import {TouchableOpacity} from 'react-native';
 
 const Room = (props: RoomProps) => {
   const {index, item} = props;
@@ -37,6 +38,8 @@ const Room = (props: RoomProps) => {
       <VRow marginTopRatio={5} justifyContent="space-between">
         <VText typography="semiBold16">Adults</VText>
         <VCounter
+          testID="adult-counter"
+          plusButtonTestID="increment-adult-button"
           onChange={value => setAdults(index, value)}
           initialNumber={adults}
           minusRule={adults > 1}
@@ -49,6 +52,7 @@ const Room = (props: RoomProps) => {
         <VCounter
           onChange={value => addNewChild(index, value)}
           initialNumber={childAges.length}
+          plusButtonTestID="increment-child-button"
           minusRule={childAges.length > 0}
           sumRule={getTotalGuestsOfRoom(item) < 5 && childAges.length < 3}
         />

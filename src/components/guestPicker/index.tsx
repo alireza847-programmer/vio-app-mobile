@@ -16,7 +16,7 @@ import {FlatList, ListRenderItem, View} from 'react-native';
 import VText from 'components/uiElements/text';
 
 const GuestPicker = (props: GuestPickerProps) => {
-  const {initialData} = props;
+  const {onSearch = link => link} = props;
   const flatListRef = useRef<FlatList>(null);
   const addRoom = useRoomsStore(state => state.addRoom);
   const rooms = useRoomsStore(state => state.rooms);
@@ -37,20 +37,23 @@ const GuestPicker = (props: GuestPickerProps) => {
         // @ts-ignore
         keyExtractor={item => item.id}
         ref={flatListRef}
+        data={rooms}
         showsVerticalScrollIndicator={false}
-        data={initialData}
         contentContainerStyle={{
           paddingVertical: 24,
         }}
         ListFooterComponent={() => {
-          if (initialData.length > 7) {
+          if (rooms.length > 7) {
             return (
-              <VText marginTopRatio={4}>Maximum number of rooms reached</VText>
+              <VText testID="maximum-room-text" marginTopRatio={4}>
+                Maximum number of rooms reached
+              </VText>
             );
           }
           return (
             <VRow marginTopRatio={5}>
               <VButton
+                testID="add-room-button"
                 title="Add Room"
                 icon={fill => <PlusSvg fill={fill} />}
                 mode="secondary"
@@ -65,11 +68,10 @@ const GuestPicker = (props: GuestPickerProps) => {
           title="Search"
           icon={fill => <SearchSvg fill={fill} />}
           mode="primary"
-          onPress={() => console.log(parseArrayToDeepLink(rooms))}
-          disabled={ifChildWithNanExists(initialData)}
-          subTitle={`${initialData.length} rooms • ${getTotalGuests(
-            initialData,
-          )} guests`}
+          testID="search-button"
+          onPress={() => onSearch(parseArrayToDeepLink(rooms))}
+          disabled={ifChildWithNanExists(rooms)}
+          subTitle={`${rooms.length} rooms • ${getTotalGuests(rooms)} guests`}
         />
       </ButtonsWrapper>
     </Container>

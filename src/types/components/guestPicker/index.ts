@@ -1,5 +1,5 @@
 import {ParsedLinkItem} from 'utils/helpers/deepLink';
 
 export interface GuestPickerProps {
-  initialData: ParsedLinkItem[];
+  onSearch?: (link: string) => void;
 }

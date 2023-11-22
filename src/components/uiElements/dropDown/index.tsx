@@ -11,7 +11,7 @@ import VButton from '../button';
 import {TouchableOpacity} from 'react-native';
 
 const VDropDown = (props: VDropDownProps) => {
-  const {data, placeHolder, onChange, defaultValue} = props;
+  const {data, placeHolder, onChange, defaultValue, testID} = props;
   const [visibleModal, setVisibleModal] = useState(false);
   const [value, setValue] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);

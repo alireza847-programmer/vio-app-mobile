@@ -55,7 +55,6 @@ export const useRoomsStore = create<RoomsStore>((set, get) => ({
     const currentRoom = rooms[index];
     const currentChildAges = currentRoom.childAges;
     currentChildAges.splice(childIndex, 1);
-    console.log(rooms);
     set(state => ({...state, rooms: rooms}));
   },
   changeChildAge(index, childIndex, value) {

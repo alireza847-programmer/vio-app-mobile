@@ -7,7 +7,15 @@ import {counterTextStyle} from './style';
 import {MinusSvg, PlusSvg} from 'assets/svgs';
 
 const VCounter = (props: VCounterProps) => {
-  const {initialNumber = 0, onChange, sumRule = true, minusRule = true} = props;
+  const {
+    initialNumber = 0,
+    onChange,
+    sumRule = true,
+    minusRule = true,
+    minusButtonTestID = 'decrement-button',
+    plusButtonTestID = 'increment-button',
+    testID = 'v-counter',
+  } = props;
   const [count, setCount] = useState(0);
   const onAction = (action: '-' | '+') => {
     let value = count;
@@ -28,12 +36,12 @@ const VCounter = (props: VCounterProps) => {
   }, [initialNumber]);
   return (
     <VRow
-      testID="v-counter"
+      testID={testID}
       minWidth={'38%'}
       justifyContent="space-between"
       fullWidth={false}>
       <VButton
-        testID="decrement-button"
+        testID={minusButtonTestID}
         mode="secondary"
         styled="CONTENT_SIZE"
         icon={fill => <MinusSvg fill={fill} />}
@@ -48,7 +56,7 @@ const VCounter = (props: VCounterProps) => {
         {count}
       </VText>
       <VButton
-        testID="increment-button"
+        testID={plusButtonTestID}
         mode="secondary"
         styled="CONTENT_SIZE"
         icon={fill => <PlusSvg fill={fill} />}
