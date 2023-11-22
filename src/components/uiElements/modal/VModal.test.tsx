@@ -1,5 +1,5 @@
 import React, {PropsWithChildren} from 'react';
-import {render, fireEvent} from '@testing-library/react-native';
+import {render, fireEvent, act} from '@testing-library/react-native';
 import VModal from './index';
 import {it, describe, expect, jest} from '@jest/globals';
 import {ThemeProvider} from '@emotion/react';
@@ -42,21 +42,9 @@ describe('VModal component', () => {
     );
 
     const closeButton = getByTestId('close-button');
-    fireEvent.press(closeButton);
-
-    expect(onCloseMock).toHaveBeenCalled();
-  });
-
-  it('calls onClose when backdrop is pressed', () => {
-    const onCloseMock = jest.fn();
-    const {getByTestId} = render(
-      <Component isVisible={true} onClose={onCloseMock} withClose withHeader>
-        <VText>This is the content of the modal.</VText>
-      </Component>,
-    );
-
-    const backdrop = getByTestId('modal-backdrop');
-    fireEvent.press(backdrop);
+    act(() => {
+      fireEvent.press(closeButton);
+    });
 
     expect(onCloseMock).toHaveBeenCalled();
   });

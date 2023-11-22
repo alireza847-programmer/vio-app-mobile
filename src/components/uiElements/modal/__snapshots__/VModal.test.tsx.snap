@@ -25,6 +25,7 @@ exports[`VModal component matches snapshot with default props 1`] = `
     ]
   }
   swipeThreshold={100}
+  testID="modal"
   transparent={true}
   visible={true}
 >
@@ -144,6 +145,7 @@ exports[`VModal component matches snapshot with header and close button 1`] = `
     ]
   }
   swipeThreshold={100}
+  testID="modal"
   transparent={true}
   visible={true}
 >
@@ -299,6 +301,7 @@ exports[`VModal component matches snapshot with header and close button 1`] = `
               "opacity": 1,
             }
           }
+          testID="close-button"
         >
           <View
             fullWidth={false}

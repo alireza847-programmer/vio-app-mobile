@@ -57,7 +57,12 @@ const VDropDown = (props: VDropDownProps) => {
           }}
         />
         <VRow paddingVerticalRatio={4} justifyContent="center">
-          <VButton onPress={onConfirm} width={'90%'} title="CONFIRM" />
+          <VButton
+            testID="confirm-button"
+            onPress={onConfirm}
+            width={'90%'}
+            title="CONFIRM"
+          />
         </VRow>
       </VModal>
     );
@@ -65,6 +70,7 @@ const VDropDown = (props: VDropDownProps) => {
   return (
     <Fragment>
       <TouchableOpacity
+        testID="dropdown-touchable"
         activeOpacity={0.8}
         onPress={() => setVisibleModal(true)}>
         <Container

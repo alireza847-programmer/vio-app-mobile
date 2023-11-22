@@ -71,7 +71,7 @@ describe('getTotalGuestsOfRoom function', () => {
   it('should calculate the total number of guests for a room', () => {
     const room = {adults: 2, childAges: [4, 6], id: 1};
     const result = getTotalGuestsOfRoom(room);
-    const expected = 3; // 2 adults + 2 children
+    const expected = 4; // 2 adults + 2 children
     expect(result).toEqual(expected);
   });
 });

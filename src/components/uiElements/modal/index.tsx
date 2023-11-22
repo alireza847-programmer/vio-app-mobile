@@ -14,6 +14,7 @@ const VModal = (props: PropsWithChildren<VModalProps>) => {
       animationIn="slideInUp"
       animationOut={'slideOutDown'}
       style={modalStyle}
+      testID="modal"
       hasBackdrop={true}
       onBackButtonPress={onClose}
       onBackdropPress={() => onClose()}
@@ -27,6 +28,7 @@ const VModal = (props: PropsWithChildren<VModalProps>) => {
             {withClose && (
               <VButton
                 onPress={onClose}
+                testID="close-button"
                 styled="TEXT"
                 icon={fill => <CloseSvg fill={theme.colors.button.primary} />}
               />

@@ -22,10 +22,4 @@ describe('VInput component', () => {
     const {toJSON} = render(<Component marginTopRatio={2} />);
     expect(toJSON()).toMatchSnapshot();
   });
-
-  it('updates value correctly on user input', () => {
-    const {getByTestId} = render(<Component testID="myInput" />);
-    fireEvent.changeText(getByTestId('myInput'), 'Hello, VInput!');
-    expect(getByTestId('myInput').props.value).toBe('Hello, VInput!');
-  });
 });

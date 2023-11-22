@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VButton component matches snapshot with custom icon and rightIcon 1`] = `
+exports[`VButton component renders correctly with custom icon and rightIcon 1`] = `
 <View
   accessibilityState={
     {
@@ -33,7 +33,7 @@ exports[`VButton component matches snapshot with custom icon and rightIcon 1`] =
     {
       "alignItems": "center",
       "backgroundColor": "#0071F3",
-      "borderColor": "#DAE9FA",
+      "borderColor": "#BFDAF9",
       "borderRadius": 15,
       "flexDirection": "row",
       "justifyContent": "center",
@@ -109,7 +109,7 @@ exports[`VButton component matches snapshot with custom icon and rightIcon 1`] =
 </View>
 `;
 
-exports[`VButton component matches snapshot with custom styled prop 1`] = `
+exports[`VButton component renders correctly with custom styled prop 1`] = `
 <View
   accessibilityState={
     {
@@ -142,13 +142,13 @@ exports[`VButton component matches snapshot with custom styled prop 1`] = `
     {
       "alignItems": "center",
       "backgroundColor": "#0071F3",
-      "borderColor": "#DAE9FA",
+      "borderColor": "#BFDAF9",
       "borderRadius": 15,
       "flexDirection": "row",
       "justifyContent": "center",
       "opacity": 1,
-      "paddingHorizontal": 30,
-      "paddingVertical": 26.68,
+      "paddingHorizontal": 15,
+      "paddingVertical": 13.34,
     }
   }
 >
@@ -176,7 +176,7 @@ exports[`VButton component matches snapshot with custom styled prop 1`] = `
 </View>
 `;
 
-exports[`VButton component matches snapshot with custom title and mode 1`] = `
+exports[`VButton component renders correctly with custom title and mode 1`] = `
 <View
   accessibilityState={
     {
@@ -209,7 +209,7 @@ exports[`VButton component matches snapshot with custom title and mode 1`] = `
     {
       "alignItems": "center",
       "backgroundColor": "#F7FBFF",
-      "borderColor": "#DAE9FA",
+      "borderColor": "#BFDAF9",
       "borderRadius": 15,
       "borderWidth": 1,
       "flexDirection": "row",
@@ -244,7 +244,7 @@ exports[`VButton component matches snapshot with custom title and mode 1`] = `
 </View>
 `;
 
-exports[`VButton component matches snapshot with default props 1`] = `
+exports[`VButton component renders correctly with default props 1`] = `
 <View
   accessibilityState={
     {
@@ -277,7 +277,7 @@ exports[`VButton component matches snapshot with default props 1`] = `
     {
       "alignItems": "center",
       "backgroundColor": "#0071F3",
-      "borderColor": "#DAE9FA",
+      "borderColor": "#BFDAF9",
       "borderRadius": 15,
       "flexDirection": "row",
       "justifyContent": "center",

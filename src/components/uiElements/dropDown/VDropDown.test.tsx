@@ -41,7 +41,7 @@ describe('VDropDown component', () => {
     const touchable = getByTestId('dropdown-touchable');
     fireEvent.press(touchable);
 
-    const modal = getByTestId('modal-backdrop');
+    const modal = getByTestId('modal');
     expect(modal).toBeDefined();
   });
 

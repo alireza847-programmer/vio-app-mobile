@@ -13,7 +13,7 @@ export const parseDeepLink = (link: string): ParsedLinkItem[] => {
     const rooms = link.split('|');
     let id = 0;
     for (const item of rooms) {
-      id = +1;
+      id = id + 1;
       const childKeyIndex = item.indexOf(':');
       const roomItem: ParsedLinkItem = {
         id: id,
