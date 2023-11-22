@@ -37,7 +37,7 @@ describe('VText component', () => {
     expect(toJSON()).toMatchSnapshot();
   });
 
-  it('matches snapshot with custom margin and padding ratios', () => {
+  it('matches snapshot with custom margin ratios', () => {
     const {toJSON} = render(
       <Component marginTopRatio={1} marginLeftRatio={2} fullWidth>
         Custom Margins
