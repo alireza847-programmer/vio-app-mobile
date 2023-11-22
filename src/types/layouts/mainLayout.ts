@@ -4,4 +4,5 @@ export interface MainLayoutProps {
   title?: string;
   withClose?: boolean;
   rightIcon?: JSX.Element;
+  onClosePress?: () => void;
 }

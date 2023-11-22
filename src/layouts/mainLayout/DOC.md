@@ -44,6 +44,8 @@ The `MainLayout` component is a flexible layout structure designed to provide a 
 
 - `withLogo` (boolean, optional): If true, the title will be treated as a logo, and the default text styling will be overridden.
 
+- `onClosePress` (function, optional): callBack function of close button
+
 ## Example
 
 ```jsx

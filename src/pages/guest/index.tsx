@@ -5,10 +5,14 @@ import React from 'react';
 import {useRoomsStore} from 'stores/rooms';
 
 const GuestPage = () => {
-  const rooms = useRoomsStore(state => state.rooms);
+  const setParams = useRoomsStore(state => state.setParams);
+  const link = useRoomsStore(state => state.link);
   return (
-    <MainLayout withHeader title={texts.guestPage.title}>
-      <GuestPicker initialData={rooms} />
+    <MainLayout
+      onClosePress={() => setParams(link || '1')}
+      withHeader
+      title={texts.guestPage.title}>
+      <GuestPicker />
     </MainLayout>
   );
 };

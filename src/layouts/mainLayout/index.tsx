@@ -5,6 +5,7 @@ import {MainLayoutProps} from 'types/layouts/mainLayout';
 import VRow from 'components/uiElements/row';
 import {CloseSvg, LogoSvg} from 'assets/svgs';
 import {theme} from 'themes/emotion';
+import VButton from 'components/uiElements/button';
 
 const MainLayout = (props: PropsWithChildren<MainLayoutProps>) => {
   const {
@@ -14,6 +15,7 @@ const MainLayout = (props: PropsWithChildren<MainLayoutProps>) => {
     rightIcon,
     withHeader,
     withLogo,
+    onClosePress = () => {},
   } = props;
   const renderHeaderTitle = () => {
     if (withLogo) {
@@ -29,7 +31,13 @@ const MainLayout = (props: PropsWithChildren<MainLayoutProps>) => {
           alignItems="center"
           justifyContent="space-between">
           <VRow fullWidth={false}>
-            {withClose && <CloseSvg fill={theme.colors.button.primary} />}
+            {withClose && (
+              <VButton
+                styled="TEXT"
+                onPress={onClosePress}
+                icon={fill => <CloseSvg fill={theme.colors.button.primary} />}
+              />
+            )}
           </VRow>
           <VText typography="semiBold16">{renderHeaderTitle()}</VText>
           <VRow fullWidth={false}>{rightIcon}</VRow>
