@@ -40,8 +40,8 @@ export const parseArrayToDeepLink = (data: ParsedLinkItem[]): string => {
     .map(item => {
       const {adults, childAges} = item;
       const childrenString =
-        childAges.length > 0 ? `${childAges.join(',')}` : '';
-      return `${adults}${childAges.length > 0 ? ':' : ''}${childrenString}`;
+        childAges.length > 0 ? `:${childAges.join(',')}` : '';
+      return `${adults}${childrenString}`;
     })
     .join('|');
 };

@@ -25,6 +25,9 @@ const GuestPicker = (props: GuestPickerProps) => {
   );
   const onNewRoom = () => {
     addRoom();
+    setTimeout(() => {
+      flatListRef.current?.scrollToEnd({animated: true});
+    });
   };
   return (
     <Container>
@@ -39,9 +42,6 @@ const GuestPicker = (props: GuestPickerProps) => {
         contentContainerStyle={{
           paddingVertical: 24,
         }}
-        onContentSizeChange={(w, h) =>
-          flatListRef.current?.scrollToOffset({offset: h, animated: true})
-        }
         ListFooterComponent={() => {
           if (initialData.length > 7) {
             return (
