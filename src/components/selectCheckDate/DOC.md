@@ -1,33 +1,17 @@
-# SelectCheckDate Component
+````markdown
+# SelectCheckDate Component Documentation
 
 ## Overview
 
-The `SelectCheckDate` component is designed to enable users to conveniently choose check-in and check-out dates. It leverages a `DatePicker` component and returns an object with the selected date range.
+The `SelectCheckDate` component facilitates the selection of check-in and check-out dates, providing a seamless experience for users. It incorporates a `DatePicker` component and delivers a callback function with the chosen date range.
 
 ## How to Use
 
-2. **Use the Component**:
-
-   ```jsx
-   const YourComponent = () => {
-     const handleDateSelect = selectedRange => {
-       console.log('Selected Date Range:', selectedRange);
-       // Your logic with the selected date range
-     };
-
-     return <SelectCheckDate onConfirm={handleDateSelect} />;
-   };
-   ```
-
-3. **Props**:
-
-   - `onConfirm` (required): Callback function that receives the selected date range as an object with `startDate` and `endDate` properties.
-
-4. **Example**:
+1. **Usage in Your Component**:
 
    ```jsx
    import React from 'react';
-   import SelectCheckDate from 'path/to/SelectCheckDate';
+   import SelectCheckDate from 'your-package-name';
 
    const YourComponent = () => {
      const handleDateSelect = selectedRange => {
@@ -40,18 +24,29 @@ The `SelectCheckDate` component is designed to enable users to conveniently choo
 
    export default YourComponent;
    ```
+````
+
+3. **Props**:
+
+   - `onConfirm` (required): Callback function that receives the selected date range as an object with `startDate` and `endDate` properties.
+
+4. **Example Output**:
+
+   ```javascript
+   // Selected Date Range Format
+   {
+     startDate: 'yyyy-mm-dd',
+     endDate: 'yyyy-mm-dd',
+   }
+   ```
 
 ## Note
 
-- The `onConfirm` callback provides the selected date range in the following format:
+- The `onConfirm` callback provides the selected date range in the specified format.
+- Internally, the `SelectCheckDate` component utilizes a `DatePicker` component for streamlined date selection.
 
-  ```javascript
-  {
-    startDate: 'yyyy-mm-dd',
-    endDate: 'yyyy-mm-dd',
-  }
-  ```
+By integrating the `SelectCheckDate` component into your application, users can effortlessly choose check-in and check-out dates, enhancing the overall user experience.
 
-- The `SelectCheckDate` component internally uses a `DatePicker` component to facilitate date selection.
+```
 
-By integrating the `SelectCheckDate` component into your application, you empower users to effortlessly choose check-in and check-out dates, enhancing the user experience in date selection.
+```
