@@ -8,10 +8,10 @@
 
 To run the app with Storybook configuration, follow these steps:
 
-1. Open a terminal window.
+1. Open App.js.
 2. Navigate to the root directory of your project.
-3. Run the following command:
+3. Add this line to code
 
-```bash
-yarn storybook-metro
+```
+export {default} from './.storybook';
 ```
