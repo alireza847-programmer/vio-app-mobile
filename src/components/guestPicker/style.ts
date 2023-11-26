@@ -1,5 +1,5 @@
 import styled from '@emotion/native';
-import {FlatList} from 'react-native';
+import {FlatList, Platform} from 'react-native';
 import {hp} from 'utils/dimensions';
 import {ParsedLinkItem} from 'utils/helpers/deepLink';
 
@@ -16,5 +16,5 @@ export const ButtonsWrapper = styled.View(({theme}) => ({
 }));
 
 export const Container = styled.View(({theme}) => ({
-  height: hp(88),
+  height: Platform.OS === 'android' ? hp(85) : hp(88),
 }));

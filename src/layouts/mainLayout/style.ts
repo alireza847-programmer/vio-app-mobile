@@ -18,6 +18,7 @@ export const Header = styled(VRow)(({theme}) => ({
   paddingTop: theme.verticalRem * 4,
   paddingBottom: theme.verticalRem * 6,
   alignItems: 'flex-start',
+  elevation: 10,
 }));
 
 export const ChildrenWrapper = styled.View(({theme}) => ({
