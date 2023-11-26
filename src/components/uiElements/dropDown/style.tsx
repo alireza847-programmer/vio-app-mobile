@@ -1,24 +1,11 @@
-import styled, {css} from '@emotion/native';
-import DropDownPicker, {
-  DropDownPickerProps,
-} from 'react-native-dropdown-picker';
-import {theme} from 'themes/emotion';
+import styled from '@emotion/native';
+import VRow from '../row';
 
-export const DropDown = styled(DropDownPicker)<
-  DropDownPickerProps<string | number | boolean>
->(({theme}) => ({
-  borderColor: theme.colors.stroke.input,
+export const Container = styled(VRow)(({theme}) => ({
   borderWidth: 1,
-  borderRadius: theme.radius * 2,
-  paddingHorizontal: theme.HorizontalRem * 4,
+  borderColor: theme.colors.stroke.input,
+  paddingLeft: theme.HorizontalRem * 4,
+  paddingRight: theme.HorizontalRem * 2,
   paddingVertical: theme.verticalRem * 2,
+  borderRadius: theme.radius * 2,
 }));
-
-export const containerStyle = css`
-  width: 40%;
-`;
-
-export const dropDownContainerStyle = css`
-  border: 1px;
-  border-color: ${theme.colors.stroke.input};
-`;

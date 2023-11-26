@@ -4,27 +4,6 @@
 
 The `VInput` component is a customizable input field designed for use in React Native applications. It provides a clean and consistent interface for capturing user input.
 
-## Usage
-
-```jsx
-import React from 'react';
-import Input from './style';
-import {VInputProps} from 'types/components/uiElements/input';
-import {theme} from 'themes/emotion';
-
-const VInput = (props: VInputProps) => {
-  const {...rest} = props;
-  return (
-    <Input
-      placeholderTextColor={theme.colors.textColor.placeHolder}
-      {...rest}
-    />
-  );
-};
-
-export default VInput;
-```
-
 ## Style
 
 The styling for the `VInput` component is defined in the `Input` module. It uses Emotion's styling system for enhanced readability and maintainability.
@@ -33,7 +12,7 @@ The styling for the `VInput` component is defined in the `Input` module. It uses
 import styled from '@emotion/native';
 import {InputProps} from 'types/components/uiElements/input';
 
-const Input =
+const VInput =
   styled.TextInput <
   InputProps >
   (({theme, marginTopRatio = 1}) => ({
@@ -47,25 +26,15 @@ const Input =
     marginTop: theme.verticalRem * marginTopRatio,
   }));
 
-export default Input;
+export default VInput;
 ```
 
-## Props
-
-### VInput Props
-
-- `marginTopRatio` (number): The ratio to set the top margin for the input.
-
-### Input Props
-
-The `Input` component accepts standard `TextInputProps` from React Native.
-
-## Example
+## Usage
 
 ```jsx
 import React, {useState} from 'react';
 import {View, Text} from 'react-native';
-import VInput from './VInput'; // Adjust the import path based on your project structure
+import VInput from './path-to-your-component/VInput';
 
 const ExampleScreen = () => {
   const [inputValue, setInputValue] = useState('');
@@ -89,3 +58,13 @@ const ExampleScreen = () => {
 
 export default ExampleScreen;
 ```
+
+## Props
+
+### VInput Props
+
+- `marginTopRatio` (number): The ratio to set the top margin for the input.
+
+### Input Props
+
+The `VInput` component accepts standard `TextInputProps` from React Native.

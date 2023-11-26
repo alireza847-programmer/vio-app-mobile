@@ -1,6 +1,8 @@
-import {ComponentMeta, ComponentStory} from '@storybook/react-native';
-import {PencilEditButton} from 'assets/svgs';
+import React from 'react';
+import {ComponentStory, ComponentMeta} from '@storybook/react-native';
+import {View} from 'react-native'; // Import any additional components you need
 import VButton from 'components/uiElements/button';
+import {VButtonProps} from 'types/components/uiElements/button';
 
 const VButtonMeta: ComponentMeta<typeof VButton> = {
   title: 'VButton',
@@ -16,60 +18,44 @@ const VButtonMeta: ComponentMeta<typeof VButton> = {
       control: {
         type: 'select',
       },
-      options: ['CONTENT_SIZE', 'FULL_WIDTH', 'TEXT'],
+      options: ['TEXT', 'FULL_WIDTH', 'CONTENT_SIZE'],
     },
+    width: {
+      control: 'number',
+    },
+    onPress: {
+      action: 'onPress',
+    },
+    // Add more argTypes as needed
   },
 };
 
 export default VButtonMeta;
 
-type VTextStory = ComponentStory<typeof VButton>;
+type VButtonStory = ComponentStory<typeof VButton>;
 
-export const Primary: VTextStory = args => <VButton {...args} />;
-
+export const Primary: VButtonStory = (args: VButtonProps) => (
+  <VButton {...args} />
+);
 Primary.args = {
   mode: 'primary',
-  title: 'Search',
+  title: 'Primary Button',
 };
 
-export const Secondary: VTextStory = args => <VButton {...args} />;
-
+export const Secondary: VButtonStory = (args: VButtonProps) => (
+  <VButton {...args} />
+);
 Secondary.args = {
   mode: 'secondary',
-  title: 'Add Room',
+  title: 'Secondary Button',
 };
 
-export const WithIcon: VTextStory = args => <VButton {...args} />;
-
-WithIcon.args = {
-  mode: 'secondary',
-  title: 'Add Room',
-  icon: fill => <PencilEditButton fill={fill} />,
-};
-
-export const ContentSized: VTextStory = args => <VButton {...args} />;
-
-ContentSized.args = {
-  mode: 'secondary',
-  icon: fill => <PencilEditButton fill={fill} />,
-  styled: 'CONTENT_SIZE',
-};
-
-export const TextButton: VTextStory = args => <VButton {...args} />;
-
-TextButton.args = {
+export const Error: VButtonStory = (args: VButtonProps) => (
+  <VButton {...args} />
+);
+Error.args = {
   mode: 'error',
-  icon: fill => <PencilEditButton fill={fill} />,
-  styled: 'TEXT',
-  title: 'Remove Room',
+  title: 'Error Button',
 };
 
-export const WithSubTitle: VTextStory = args => <VButton {...args} />;
-
-WithSubTitle.args = {
-  mode: 'primary',
-  icon: fill => <PencilEditButton fill={fill} />,
-  styled: 'FULL_WIDTH',
-  title: 'Search',
-  subTitle: '1 rooms • 2 guests',
-};
+// Add more stories for different variations as needed

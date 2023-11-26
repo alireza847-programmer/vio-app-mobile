@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VInput component matches snapshot with custom marginTopRatio 1`] = `
+exports[`VInput component renders correctly with custom marginTopRatio 1`] = `
 <TextInput
   marginTopRatio={2}
   placeholderTextColor="#A3ACB8"
@@ -22,7 +22,7 @@ exports[`VInput component matches snapshot with custom marginTopRatio 1`] = `
 />
 `;
 
-exports[`VInput component matches snapshot with default props 1`] = `
+exports[`VInput component renders correctly with default props 1`] = `
 <TextInput
   placeholderTextColor="#A3ACB8"
   style={

@@ -1,6 +1,8 @@
-import {ComponentMeta, ComponentStory} from '@storybook/react-native';
-import VRow from 'components/uiElements/row';
+import React, {PropsWithChildren} from 'react';
+import {ComponentStory, ComponentMeta} from '@storybook/react-native';
 import {View} from 'react-native';
+import VRow from 'components/uiElements/row';
+import {VRowProps} from 'types/components/uiElements/row';
 
 const VRowMeta: ComponentMeta<typeof VRow> = {
   title: 'VRow',
@@ -26,36 +28,40 @@ const VRowMeta: ComponentMeta<typeof VRow> = {
       options: ['flex-start', 'flex-end', 'center', 'stretch', 'baseline'],
     },
     backgroundColor: {
-      control: {
-        type: 'color',
-      },
+      control: 'color',
     },
     fullWidth: {
-      type: 'boolean',
+      control: 'boolean',
     },
     marginTopRatio: {
-      step: 1,
-      min: 0,
-      max: 90,
-      range: true,
+      control: 'number',
     },
     marginLeftRatio: {
-      step: 1,
-      min: 0,
-      max: 90,
-      range: true,
+      control: 'number',
     },
     paddingHorizontalRatio: {
-      step: 1,
-      min: 0,
-      max: 90,
-      range: true,
+      control: 'number',
     },
     paddingVerticalRatio: {
-      step: 1,
-      min: 0,
-      max: 90,
-      range: true,
+      control: 'number',
+    },
+    paddingLeftRatio: {
+      control: 'number',
+    },
+    paddingRightRatio: {
+      control: 'number',
+    },
+    marginRighRatio: {
+      control: 'number',
+    },
+    minWidth: {
+      control: 'text',
+    },
+    width: {
+      control: 'number',
+    },
+    height: {
+      control: 'number',
     },
   },
 };
@@ -64,34 +70,37 @@ export default VRowMeta;
 
 type VRowStory = ComponentStory<typeof VRow>;
 
-export const Basic: VRowStory = args => (
+export const Default: VRowStory = (args: PropsWithChildren<VRowProps>) => (
+  <VRow {...args} />
+);
+Default.args = {
+  children: (
+    <>
+      <View style={{width: 30, height: 30, backgroundColor: 'blue'}} />
+      <View style={{width: 30, height: 30, backgroundColor: 'blue'}} />
+    </>
+  ),
+};
+
+export const CustomStyle: VRowStory = (args: PropsWithChildren<VRowProps>) => (
   <VRow {...args}>
-    <View
-      style={{
-        width: 30,
-        height: 30,
-        borderRadius: 7.5,
-        backgroundColor: 'blue',
-      }}
-    />
-    <View
-      style={{
-        width: 30,
-        height: 30,
-        borderRadius: 7.5,
-        backgroundColor: 'blue',
-      }}
-    />
+    <View style={{width: 30, height: 30, backgroundColor: 'blue'}} />
+    <View style={{width: 30, height: 30, backgroundColor: 'blue'}} />
   </VRow>
 );
-
-Basic.args = {
-  justifyContent: 'flex-start',
+CustomStyle.args = {
+  justifyContent: 'space-between',
   alignItems: 'center',
-  backgroundColor: 'red',
+  backgroundColor: 'lightblue',
   fullWidth: true,
-  marginTopRatio: 0,
-  marginLeftRatio: 0,
-  paddingHorizontalRatio: 0,
-  paddingVerticalRatio: 0,
+  marginTopRatio: 2,
+  marginLeftRatio: 2,
+  paddingHorizontalRatio: 2,
+  paddingVerticalRatio: 2,
+  paddingLeftRatio: 2,
+  paddingRightRatio: 2,
+  marginRighRatio: 2,
+  minWidth: '50%',
+  width: 200,
+  height: 100,
 };

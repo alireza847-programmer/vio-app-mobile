@@ -1,59 +1,60 @@
-# VCounter Component Documentation
+# VCounter Component
 
-The `VCounter` component is a simple counter component implemented in React Native. It allows users to increase or decrease a numeric value with the help of plus and minus buttons.
+## Overview
 
-## Usage
+The `VCounter` component is a customizable counter input element that allows users to increment or decrement a numerical value. It provides buttons for both increasing and decreasing the count, and the count value can be controlled programmatically.
 
-```jsx
-import VCounter from 'components/uiElements/counter';
+## How to Use
 
-const YourComponent = () => {
-  const handleCounterChange = value => {
-    // Handle the counter value change
-    console.log('Counter Value:', value);
-    // Additional logic or state management can be added here
-  };
+1. **Import the Component**:
 
-  return (
-    <VCounter
-      initialNumber={0} // Optional: Initial value for the counter (default is 0)
-      onChange={handleCounterChange} // Callback function on counter value change
-    />
-  );
-};
+   ```jsx
+   import React from 'react';
+   import VCounter from 'path/to/VCounter';
 
-export default YourComponent;
-```
+   const YourComponent = () => {
+     const handleCountChange = newCount => {
+       console.log('New Count:', newCount);
+       // Your logic with the new count
+     };
 
-## Props
+     return <VCounter onChange={handleCountChange} />;
+   };
 
-### `initialNumber` (number)
+   export default YourComponent;
+   ```
 
-An optional prop that sets the initial value for the counter. The default value is `0`.
+2. **Props**:
 
-### `onChange` (function)
+   - `initialNumber` (optional, default: 0): The initial value of the counter.
+   - `onChange` (required): Callback function that receives the new count value whenever it changes.
+   - `sumRule` (optional, default: true): If set to `true`, the increment button is enabled.
+   - `minusRule` (optional, default: true): If set to `true`, the decrement button is enabled.
 
-A callback function that is triggered when the counter value changes. It receives the updated value as an argument.
+3. **Example**:
 
-## Example
+   ```jsx
+   import React from 'react';
+   import VCounter from 'path/to/VCounter';
 
-```jsx
-import VCounter from 'components/uiElements/counter';
+   const YourComponent = () => {
+     const handleCountChange = newCount => {
+       console.log('New Count:', newCount);
+       // Your logic with the new count
+     };
 
-const YourComponent = () => {
-  const handleCounterChange = value => {
-    // Handle the counter value change
-    console.log('Counter Value:', value);
-    // Additional logic or state management can be added here
-  };
+     return <VCounter initialNumber={5} onChange={handleCountChange} />;
+   };
 
-  return (
-    <VCounter
-      initialNumber={5} // Set the initial value to 5
-      onChange={handleCounterChange} // Handle counter value change
-    />
-  );
-};
+   export default YourComponent;
+   ```
 
-export default YourComponent;
-```
+## Styling
+
+The component provides minimal styling, but you can customize its appearance by styling the individual buttons or adjusting the layout.
+
+## Note
+
+- The `onChange` callback provides the new count value whenever it changes due to user interactions.
+- The component uses the `MinusSvg` and `PlusSvg` icons for the decrement and increment buttons, respectively.
+- The `sumRule` and `minusRule` props control whether the increment and decrement buttons are enabled, providing flexibility based on your application logic.

@@ -1,6 +1,9 @@
+import {DimensionValue} from 'react-native';
+
 export interface ButtonProps {
   mode?: 'primary' | 'secondary' | 'error';
   styled?: 'TEXT' | 'FULL_WIDTH' | 'CONTENT_SIZE';
+  width?: DimensionValue;
 }
 
 export interface VButtonProps extends ButtonProps {
