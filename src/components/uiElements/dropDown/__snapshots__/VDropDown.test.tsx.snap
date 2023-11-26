@@ -1,135 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VDropDown component matches snapshot with custom data and placeholder 1`] = `
-<View
-  style={
-    [
-      {
-        "width": "100%",
-      },
-      {
-        "zIndex": 5000,
-      },
-      {
-        "width": "40%",
-      },
-    ]
-  }
->
-  <View
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": false,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onClick={[Function]}
-    onLayout={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "alignItems": "center",
-        "backgroundColor": "#fff",
-        "borderColor": "#BED2E9",
-        "borderRadius": 15,
-        "borderWidth": 1,
-        "flexDirection": "row",
-        "justifyContent": "space-between",
-        "minHeight": 50,
-        "opacity": 1,
-        "paddingHorizontal": 30,
-        "paddingVertical": 13.34,
-        "width": "100%",
-        "zIndex": 5000,
-      }
-    }
-  >
-    <Text
-      style={
-        [
-          {
-            "color": "#000",
-            "flex": 1,
-          },
-          {},
-          false,
-          {
-            "fontFamily": "Inter-SemiBold",
-            "fontSize": 16,
-          },
-        ]
-      }
-    >
-      Select an option
-    </Text>
-    <View
-      style={
-        [
-          {
-            "marginLeft": 10,
-          },
-          {},
-        ]
-      }
-    >
-      <SvgMock
-        fill="#0071F3"
-        style={
-          [
-            {
-              "height": 20,
-              "width": 20,
-            },
-            {},
-          ]
-        }
-      />
-    </View>
-  </View>
-</View>
-`;
-
 exports[`VDropDown component matches snapshot with default props 1`] = `
-<View
-  style={
-    [
-      {
-        "width": "100%",
-      },
-      {
-        "zIndex": 5000,
-      },
-      {
-        "width": "40%",
-      },
-    ]
-  }
->
+[
   <View
     accessibilityState={
       {
         "busy": undefined,
         "checked": undefined,
-        "disabled": false,
+        "disabled": undefined,
         "expanded": undefined,
         "selected": undefined,
       }
@@ -146,7 +24,6 @@ exports[`VDropDown component matches snapshot with default props 1`] = `
     collapsable={false}
     focusable={true}
     onClick={[Function]}
-    onLayout={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -155,63 +32,115 @@ exports[`VDropDown component matches snapshot with default props 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       {
-        "alignItems": "center",
-        "backgroundColor": "#fff",
-        "borderColor": "#BED2E9",
-        "borderRadius": 15,
-        "borderWidth": 1,
-        "flexDirection": "row",
-        "justifyContent": "space-between",
-        "minHeight": 50,
         "opacity": 1,
-        "paddingHorizontal": 30,
-        "paddingVertical": 13.34,
-        "width": "100%",
-        "zIndex": 5000,
       }
     }
+    testID="dropdown-touchable"
   >
-    <Text
-      style={
-        [
-          {
-            "color": "#000",
-            "flex": 1,
-          },
-          {},
-          false,
-          {
-            "fontFamily": "Inter-SemiBold",
-            "fontSize": 16,
-          },
-        ]
-      }
-    >
-      Select an item
-    </Text>
     <View
+      alignItems="center"
+      fullWidth={false}
+      justifyContent="space-between"
       style={
         [
           {
-            "marginLeft": 10,
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginLeft": 0,
+            "marginRight": 0,
+            "marginTop": 0,
+            "paddingHorizontal": 0,
+            "paddingVertical": 0,
           },
-          {},
+          [
+            {
+              "borderColor": "#BED2E9",
+              "borderRadius": 15,
+              "borderWidth": 1,
+              "paddingLeft": 30,
+              "paddingRight": 15,
+              "paddingVertical": 13.34,
+            },
+            undefined,
+          ],
         ]
       }
     >
-      <SvgMock
-        fill="#0071F3"
+      <Text
         style={
           [
             {
-              "height": 20,
-              "width": 20,
+              "color": "#2A333D",
+              "fontFamily": "Inter-SemiBold",
+              "fontSize": 16,
+              "marginLeft": 0,
+              "marginTop": 0,
+              "textAlign": "left",
+              "textAlignVertical": "center",
+              "width": 75,
             },
-            {},
+            undefined,
           ]
         }
-      />
+        textAlign="left"
+        typography="semiBold16"
+        width={75}
+      >
+        Select an option
+      </Text>
+      <View
+        fullWidth={false}
+        marginLeftRatio={3}
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "flex-start",
+              "marginLeft": 22.5,
+              "marginRight": 0,
+              "marginTop": 0,
+              "paddingHorizontal": 0,
+              "paddingVertical": 0,
+            },
+            undefined,
+          ]
+        }
+      >
+        <SvgMock
+          fill="#0071F3"
+        />
+      </View>
     </View>
-  </View>
-</View>
+  </View>,
+  <Modal
+    animationType="none"
+    deviceHeight={null}
+    deviceWidth={null}
+    hardwareAccelerated={false}
+    hideModalContentWhileAnimating={false}
+    onBackdropPress={[Function]}
+    onModalHide={[Function]}
+    onModalWillHide={[Function]}
+    onModalWillShow={[Function]}
+    onRequestClose={[Function]}
+    panResponderThreshold={4}
+    scrollHorizontal={false}
+    scrollOffset={0}
+    scrollOffsetMax={0}
+    scrollTo={null}
+    statusBarTranslucent={false}
+    supportedOrientations={
+      [
+        "portrait",
+        "landscape",
+      ]
+    }
+    swipeThreshold={100}
+    testID="modal"
+    transparent={true}
+    visible={false}
+  />,
+]
 `;

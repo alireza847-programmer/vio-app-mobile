@@ -13,6 +13,7 @@ export interface EmotionThemeType {
         primary: string;
         secondary: string;
         error: string;
+        disabled: string;
       };
     };
     button: {
@@ -25,6 +26,7 @@ export interface EmotionThemeType {
       button: string;
       divider: string;
       input: string;
+      disabledButton: string;
     };
   };
   fonts: {

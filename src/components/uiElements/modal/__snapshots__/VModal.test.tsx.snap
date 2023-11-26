@@ -1,0 +1,392 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VModal component matches snapshot with default props 1`] = `
+<Modal
+  animationType="none"
+  deviceHeight={null}
+  deviceWidth={null}
+  hardwareAccelerated={false}
+  hideModalContentWhileAnimating={false}
+  onBackdropPress={[Function]}
+  onModalHide={[Function]}
+  onModalWillHide={[Function]}
+  onModalWillShow={[Function]}
+  onRequestClose={[Function]}
+  panResponderThreshold={4}
+  scrollHorizontal={false}
+  scrollOffset={0}
+  scrollOffsetMax={0}
+  scrollTo={null}
+  statusBarTranslucent={false}
+  supportedOrientations={
+    [
+      "portrait",
+      "landscape",
+    ]
+  }
+  swipeThreshold={100}
+  testID="modal"
+  transparent={true}
+  visible={true}
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "backgroundColor": "black",
+        "bottom": 0,
+        "height": 1334,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      }
+    }
+  />
+  <View
+    collapsable={false}
+    deviceHeight={null}
+    deviceWidth={null}
+    hideModalContentWhileAnimating={false}
+    onBackdropPress={[Function]}
+    onModalHide={[Function]}
+    onModalWillHide={[Function]}
+    onModalWillShow={[Function]}
+    panResponderThreshold={4}
+    pointerEvents="box-none"
+    scrollHorizontal={false}
+    scrollOffset={0}
+    scrollOffsetMax={0}
+    scrollTo={null}
+    statusBarTranslucent={false}
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "flex-end",
+        "margin": 0,
+        "marginBottom": 10,
+        "padding": 0,
+        "transform": [
+          {
+            "translateY": 1334,
+          },
+        ],
+      }
+    }
+    supportedOrientations={
+      [
+        "portrait",
+        "landscape",
+      ]
+    }
+    swipeThreshold={100}
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 15,
+            "justifyContent": "center",
+            "width": "95%",
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</Modal>
+`;
+
+exports[`VModal component matches snapshot with header and close button 1`] = `
+<Modal
+  animationType="none"
+  deviceHeight={null}
+  deviceWidth={null}
+  hardwareAccelerated={false}
+  hideModalContentWhileAnimating={false}
+  onBackdropPress={[Function]}
+  onModalHide={[Function]}
+  onModalWillHide={[Function]}
+  onModalWillShow={[Function]}
+  onRequestClose={[Function]}
+  panResponderThreshold={4}
+  scrollHorizontal={false}
+  scrollOffset={0}
+  scrollOffsetMax={0}
+  scrollTo={null}
+  statusBarTranslucent={false}
+  supportedOrientations={
+    [
+      "portrait",
+      "landscape",
+    ]
+  }
+  swipeThreshold={100}
+  testID="modal"
+  transparent={true}
+  visible={true}
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "backgroundColor": "black",
+        "bottom": 0,
+        "height": 1334,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      }
+    }
+  />
+  <View
+    collapsable={false}
+    deviceHeight={null}
+    deviceWidth={null}
+    hideModalContentWhileAnimating={false}
+    onBackdropPress={[Function]}
+    onModalHide={[Function]}
+    onModalWillHide={[Function]}
+    onModalWillShow={[Function]}
+    panResponderThreshold={4}
+    pointerEvents="box-none"
+    scrollHorizontal={false}
+    scrollOffset={0}
+    scrollOffsetMax={0}
+    scrollTo={null}
+    statusBarTranslucent={false}
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "flex-end",
+        "margin": 0,
+        "marginBottom": 10,
+        "padding": 0,
+        "transform": [
+          {
+            "translateY": 1334,
+          },
+        ],
+      }
+    }
+    supportedOrientations={
+      [
+        "portrait",
+        "landscape",
+      ]
+    }
+    swipeThreshold={100}
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 15,
+            "justifyContent": "center",
+            "width": "95%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        justifyContent="space-between"
+        paddingHorizontalRatio={4}
+        paddingVerticalRatio={6}
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginLeft": 0,
+              "marginRight": 0,
+              "marginTop": 0,
+              "paddingHorizontal": 30,
+              "paddingVertical": 40.019999999999996,
+              "width": "100%",
+            },
+            [
+              {
+                "borderBottomColor": "#EFF2F6",
+                "borderBottomWidth": 1,
+              },
+              undefined,
+            ],
+          ]
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": false,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "borderColor": "#BFDAF9",
+              "borderRadius": 15,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "opacity": 1,
+            }
+          }
+          testID="close-button"
+        >
+          <View
+            fullWidth={false}
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "justifyContent": "flex-start",
+                  "marginLeft": 0,
+                  "marginRight": 0,
+                  "marginTop": 0,
+                  "paddingHorizontal": 0,
+                  "paddingVertical": 0,
+                },
+                undefined,
+              ]
+            }
+          >
+            <SvgMock
+              fill="#0071F3"
+            />
+          </View>
+          <Text
+            color="#0071F3"
+            marginTopRatio={0}
+            style={
+              [
+                {
+                  "color": "#0071F3",
+                  "fontFamily": "Inter-SemiBold",
+                  "fontSize": 16,
+                  "marginLeft": 0,
+                  "marginTop": 0,
+                  "textAlign": "center",
+                  "textAlignVertical": "center",
+                },
+                undefined,
+              ]
+            }
+            typography="semiBold16"
+          />
+        </View>
+        <Text
+          style={
+            [
+              {
+                "color": "#2A333D",
+                "fontFamily": "Inter-SemiBold",
+                "fontSize": 16,
+                "marginLeft": 0,
+                "marginTop": 0,
+                "textAlign": "center",
+                "textAlignVertical": "center",
+              },
+              undefined,
+            ]
+          }
+          typography="semiBold16"
+        >
+          My Modal
+        </Text>
+        <SvgMock
+          fill="transparent"
+        />
+      </View>
+      <Text
+        style={
+          [
+            {
+              "color": "#2A333D",
+              "fontFamily": "Inter-Medium",
+              "fontSize": 15,
+              "marginLeft": 0,
+              "marginTop": 0,
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            undefined,
+          ]
+        }
+      >
+        This is the content of the modal.
+      </Text>
+    </View>
+  </View>
+</Modal>
+`;

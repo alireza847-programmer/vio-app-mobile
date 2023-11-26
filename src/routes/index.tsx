@@ -1,9 +1,10 @@
 import React from 'react';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import RootStack from './root';
-import {theme} from 'themes/emotion';
+import {useRoomsStore} from 'stores/rooms';
 
 const Router = () => {
+  const setParams = useRoomsStore(state => state.setParams);
   const routerTheme = {
     ...DefaultTheme,
     colors: {
@@ -11,8 +12,21 @@ const Router = () => {
       background: '#fff',
     },
   };
+  const linking = {
+    prefixes: ['vioapp://', 'https://vioapp.com'],
+    config: {
+      screens: {
+        homePage: {
+          path: 'room',
+          parse: {
+            link: (link: string) => setParams(link),
+          },
+        },
+      },
+    },
+  };
   return (
-    <NavigationContainer theme={routerTheme}>
+    <NavigationContainer linking={linking} theme={routerTheme}>
       <RootStack />
     </NavigationContainer>
   );

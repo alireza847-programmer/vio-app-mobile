@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `VText` component is a customizable text element designed to work seamlessly with Emotion and TypeScript in a React Native project. It provides a straightforward way to style text components with various properties.
+The `VText` component is a versatile text element crafted to seamlessly integrate with Emotion and TypeScript in your React Native project. It offers a simple and efficient way to style text components with a range of customizable properties.
 
 ## Usage
 
@@ -23,15 +23,16 @@ const MyComponent = () => {
 
 ## Props
 
-typography (optional): Specify the typography style for the text, choosing from 'bold21', 'medium15', 'semiBold16', 'semiBold18', 'regular16'.
-Default is 'medium15'
+- **typography** (optional): Specifies the typography style for the text. Options include 'bold21', 'medium15', 'semiBold16', 'semiBold18', 'regular16'. The default is 'medium15'.
 
-color (optional): Set the color of the text. If not provided, it defaults to the primary text color from the theme.
+- **color** (optional): Sets the color of the text. If not provided, it defaults to the primary text color from the theme.
 
-textAlign (optional): Define the text alignment. Options include 'center', 'auto', 'left', 'right', and 'justify'. Default is 'center'.
+- **textAlign** (optional): Defines the text alignment. Options include 'center', 'auto', 'left', 'right', and 'justify'. The default is 'center'.
 
-marginTopRatio (optional): Adjust the top margin of the text based on a ratio. Default is 2.
+- **marginTopRatio** (optional): Adjusts the top margin of the text based on a ratio. The default is 2.
 
-marginLeftRatio (optional): Adjust the left margin of the text based on a ratio. Default is 0.
+- **marginLeftRatio** (optional): Adjusts the left margin of the text based on a ratio. The default is 0.
 
-fullWidth (optional): Set the width of Component to 100%. Default is false.
+- **fullWidth** (optional): Sets the width of the component to 100%. The default is false.
+
+- **width** (optional): Sets the width of the component. If provided, it overrides the fullWidth prop. No default value.

@@ -28,4 +28,6 @@ export interface VRowProps {
   paddingRightRatio?: number;
   marginRighRatio?: number;
   minWidth?: DimensionValue;
+  width?: number;
+  height?: number;
 }

@@ -1,7 +1,10 @@
 import {ItemType} from 'react-native-dropdown-picker';
 
 export interface VDropDownProps {
-  data: Array<ItemType<number | string | boolean>>;
+  data: Array<string>;
   placeHolder?: string;
-  onChange: (value: string | number | boolean | null) => void;
+  onChange: (value: string) => void;
+  title: string;
+  defaultValue?: number;
+  testID?: number;
 }

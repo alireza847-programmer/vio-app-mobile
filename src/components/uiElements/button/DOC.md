@@ -1,44 +1,76 @@
-# VButton Component
+# VButton Component Documentation
 
 ## Overview
 
-The `VButton` component is a versatile button designed for use in React Native applications. It offers flexibility in styling and functionality, making it suitable for various use cases.
+The `VButton` component is a versatile button element designed for React Native applications. It provides flexibility in styling and configuration to suit different design needs.
 
-## Style
-
-The styling for the `VButton` component is defined in the `Button` module, utilizing Emotion's styling system. It supports various styles and modes, providing a consistent appearance across your application.
+## Usage
 
 ```jsx
-import styled from '@emotion/native';
-import {ButtonProps} from 'types/components/uiElements/button';
+import React from 'react';
+import VButton, {VButtonProps} from './path-to-your-component/VButton'; // Adjust the import path based on your project structure
 
-const Button = styled.TouchableOpacity<ButtonProps>(
-  ({theme, mode = 'primary', styled = 'FULL_WIDTH'}) => ({
-    flexDirection: 'row',
-    justifyContent: 'center',
-    paddingVertical: theme.verticalRem * 4,
-    borderRadius: theme.radius * 2,
-    borderColor: theme.colors.stroke.button,
-    ...(styled === 'FULL_WIDTH' && {width: '100%'}),
-    ...(styled === 'CONTENT_SIZE' && {
-      paddingHorizontal: theme.HorizontalRem * 4,
-    }),
-    ...(styled !== 'TEXT' && {backgroundColor: theme.colors.button[mode]}),
-    ...(mode === 'secondary' && styled !== 'TEXT' && {borderWidth: 1}),
-  }),
-);
+const MyComponent = () => {
+  const handlePress = () => {
+    // Handle button press logic here
+  };
 
-export default Button;
+  const buttonProps: VButtonProps = {
+    mode: 'primary', // Options: 'primary', 'secondary', 'error'
+    styled: 'FULL_WIDTH', // Options: 'TEXT', 'FULL_WIDTH', 'CONTENT_SIZE'
+    title: 'Click me',
+    subTitle: 'Optional subtitle',
+    onPress: handlePress,
+    // Add other props as needed
+  };
+
+  return <VButton {...buttonProps} />;
+};
 ```
 
 ## Props
 
 ### VButton Props
 
-- `mode` (string): The mode of the button. It can be 'primary', 'secondary', or 'error'.
-- `styled` (string): The style of the button. It can be 'TEXT', 'FULL_WIDTH', or 'CONTENT_SIZE'.
-- `title` (string): The main text displayed on the button.
-- `icon` (function): A function that takes a fill color as a parameter and returns a JSX element for the button icon.
-- `rightIcon` (function): Similar to `icon`, but positions the icon on the right side of the button.
-- `subTitle` (string): An additional text displayed below the main title.
-- `onPress` (function): A callback function to be executed when the button is pressed.
+- `mode` (string): The mode of the button. Options include 'primary', 'secondary', and 'error'.
+- `styled` (string): The style of the button. Options include 'TEXT', 'FULL_WIDTH', and 'CONTENT_SIZE'.
+- `width` (DimensionValue): The width of the button. Use this to set a custom width for the button.
+
+### Extended VButton Props
+
+- `title` (string): The main text content of the button.
+- `icon` (function): A function that returns a React element to be used as the button icon.
+- `rightIcon` (function): A function that returns a React element to be used as the icon on the right side of the button.
+- `subTitle` (string): Optional subtitle text to display next to the main title.
+- `onPress` (function): A callback function triggered when the button is pressed.
+- `testID` (string): Test identifier for testing purposes.
+- `disabled` (boolean): If true, the button is in a disabled state.
+
+## Example
+
+```jsx
+import React from 'react';
+import VButton, {VButtonProps} from './path-to-your-component/VButton'; // Adjust the import path based on your project structure
+
+const ExampleScreen = () => {
+  const handlePress = () => {
+    // Handle button press logic here
+  };
+
+  const buttonProps: VButtonProps = {
+    mode: 'primary',
+    title: 'Click me',
+    subTitle: 'Optional subtitle',
+    styled: 'FULL_WIDTH',
+    onPress: handlePress,
+  };
+
+  return <VButton {...buttonProps} />;
+};
+
+export default ExampleScreen;
+```
+
+## Icons
+
+The `icon` and `rightIcon` props allow you to add custom icons to the left and right sides of the button, enhancing its visual appeal. Pass functions that return React elements for customization.

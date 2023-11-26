@@ -27,7 +27,9 @@
     "react-native-responsive-dimensions": "^3.1.1",
     "react-native-screens": "^3.27.0",
     "react-native-svg": "^14.0.0",
-    "ts-jest": "^29.1.1"
+    "react-native-wheely": "^0.6.0",
+    "ts-jest": "^29.1.1",
+    "zustand": "^4.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

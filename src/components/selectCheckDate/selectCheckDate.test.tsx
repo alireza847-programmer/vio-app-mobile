@@ -11,19 +11,24 @@ import {
   getToday,
   getTomarrow,
 } from 'utils/helpers/date';
+
+// Describe the test suite for SelectCheckDate Component
 describe('SelectCheckDate Component', () => {
+  // Define a wrapper component that includes the ThemeProvider
   const Component = (props: SelectCheckDateProps) => (
     <ThemeProvider theme={theme}>
       <SelectCheckDate {...props} />
     </ThemeProvider>
   );
 
+  // Test: Ensure SelectCheckDate renders correctly
   test('renders correctly', () => {
     const {getByText} = render(<Component onConfirm={() => {}} />);
     const selectCheckDateComponent = getByText('Check In');
     expect(selectCheckDateComponent).toBeTruthy();
   });
 
+  // Test: Check if the Check In button renders the correct date initially (today)
   test('should check in button renders correct date in initial component (today)', () => {
     const {getByTestId} = render(<Component onConfirm={() => {}} />);
     const checkInDate = getByTestId('check-in-button');
@@ -33,32 +38,39 @@ describe('SelectCheckDate Component', () => {
     );
   });
 
-  test('should check out button renders correct date in initial component (tomarrow)', () => {
+  // Test: Check if the Check Out button renders the correct date initially (tomorrow)
+  test('should check out button renders correct date in initial component (tomorrow)', () => {
     const {getByTestId} = render(<Component onConfirm={() => {}} />);
     const checkOutDate = getByTestId('check-out-button');
-    const tomarrow = getTomarrow();
+    const tomorrow = getTomarrow();
     expect(checkOutDate).toHaveTextContent(
-      formatDateToCheckInCheckoutFormat(tomarrow),
+      formatDateToCheckInCheckoutFormat(tomorrow),
     );
   });
 
+  // Test: Ensure onConfirm is called with the correct parameters when a date range is confirmed
   test('calls onConfirm with the correct parameters when date is confirmed', () => {
+    // Mock the onConfirm function
     const onConfirmMock = jest.fn();
+
+    // Render the component with the mock function
     const {getByText, getAllByText, getByTestId} = render(
       <Component onConfirm={onConfirmMock} />,
     );
-    //press check in button to show date picker
+
+    // Press the Check In button to show the date picker
     const checkInButton = getByTestId('check-in-button');
     fireEvent.press(checkInButton);
 
-    //get today and tomarrow button and select a range
+    // Get today and tomorrow buttons and select a date range
     const today = getToday('YYYY-MM-DD');
-    const tomarrow = getTomarrow('YYYY-MM-DD');
+    const tomorrow = getTomarrow('YYYY-MM-DD');
     const todayButtons = getAllByText(formatDate(today, 'DD'));
-    const tomarrowButtons = getAllByText(formatDate(tomarrow, 'DD'));
+    const tomorrowButtons = getAllByText(formatDate(tomorrow, 'DD'));
     fireEvent.press(todayButtons[0]);
-    fireEvent.press(tomarrowButtons[0]);
+    fireEvent.press(tomorrowButtons[0]);
 
+    // Press the CONFIRM button
     const confirmButton = getByText('CONFIRM');
     expect(confirmButton).toBeTruthy();
     fireEvent.press(confirmButton);
@@ -66,7 +78,7 @@ describe('SelectCheckDate Component', () => {
     // Ensure onConfirm is called with the expected parameters
     expect(onConfirmMock).toHaveBeenCalledWith({
       startDate: today,
-      endDate: tomarrow,
+      endDate: tomorrow,
     });
   });
 });

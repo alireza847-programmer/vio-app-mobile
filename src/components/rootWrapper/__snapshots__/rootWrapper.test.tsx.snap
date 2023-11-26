@@ -5,9 +5,8 @@ exports[`RootWrapper component matches snapshot 1`] = `
   style={
     [
       {
-        "backgroundColor": "#F2F2F2",
+        "backgroundColor": "#fff",
         "flex": 1,
-        "paddingHorizontal": 30,
       },
       undefined,
     ]

@@ -16,5 +16,5 @@ export const Basic: SelectCheckDateStory = args => (
 );
 
 Basic.args = {
-  onSelect(params) {},
+  onConfirm(params) {},
 };

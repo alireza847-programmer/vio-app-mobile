@@ -1,4 +1,4 @@
-export interface TextProps {
+export interface VTextProps {
   typography?:
     | 'bold21'
     | 'medium15'
@@ -10,4 +10,6 @@ export interface TextProps {
   marginTopRatio?: number;
   marginLeftRatio?: number;
   fullWidth?: boolean;
+  width?: number;
+  minWidth?: number;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {render} from '@testing-library/react-native';
+import {render, fireEvent} from '@testing-library/react-native';
 import VInput from './index';
 import {it, describe, expect} from '@jest/globals';
 import {VInputProps} from 'types/components/uiElements/input';
@@ -13,12 +13,12 @@ const Component = (props: VInputProps) => (
 );
 
 describe('VInput component', () => {
-  it('matches snapshot with default props', () => {
+  it('renders correctly with default props', () => {
     const {toJSON} = render(<Component />);
     expect(toJSON()).toMatchSnapshot();
   });
 
-  it('matches snapshot with custom marginTopRatio', () => {
+  it('renders correctly with custom marginTopRatio', () => {
     const {toJSON} = render(<Component marginTopRatio={2} />);
     expect(toJSON()).toMatchSnapshot();
   });

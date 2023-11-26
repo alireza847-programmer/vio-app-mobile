@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VRow component matches snapshot with custom background color 1`] = `
+exports[`VRow component should match snapshot with custom background color 1`] = `
 <View
   backgroundColor="blue"
   style={
@@ -25,7 +25,7 @@ exports[`VRow component matches snapshot with custom background color 1`] = `
 </View>
 `;
 
-exports[`VRow component matches snapshot with custom minWidth 1`] = `
+exports[`VRow component should match snapshot with custom minWidth 1`] = `
 <View
   minWidth={150}
   style={
@@ -50,7 +50,7 @@ exports[`VRow component matches snapshot with custom minWidth 1`] = `
 </View>
 `;
 
-exports[`VRow component matches snapshot with custom styling and justifyContent 1`] = `
+exports[`VRow component should match snapshot with custom styling and justifyContent 1`] = `
 <View
   justifyContent="space-between"
   marginLeftRatio={2}
@@ -76,7 +76,7 @@ exports[`VRow component matches snapshot with custom styling and justifyContent 
 </View>
 `;
 
-exports[`VRow component matches snapshot with default props 1`] = `
+exports[`VRow component should match snapshot with default props 1`] = `
 <View
   style={
     [
@@ -99,7 +99,7 @@ exports[`VRow component matches snapshot with default props 1`] = `
 </View>
 `;
 
-exports[`VRow component matches snapshot with fullWidth prop 1`] = `
+exports[`VRow component should match snapshot with fullWidth prop 1`] = `
 <View
   fullWidth={true}
   style={

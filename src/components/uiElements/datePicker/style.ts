@@ -2,7 +2,7 @@ import styled from '@emotion/native';
 import {hp, wp} from 'utils/dimensions';
 
 export const DatePickerContainer = styled.View(({theme}) => ({
-  width: '100%',
+  width: '90%',
 }));
 
 export const calenderStyle = {

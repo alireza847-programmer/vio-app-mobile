@@ -16,9 +16,13 @@ const VButton = (props: VButtonProps) => {
     onPress,
     testID,
     disabled = false,
+    width,
   } = props;
 
   const renderContentColor = () => {
+    if (disabled) {
+      return theme.colors.textColor.button.disabled;
+    }
     if (styled === 'TEXT') {
       return theme.colors.button[mode];
     }
@@ -27,6 +31,7 @@ const VButton = (props: VButtonProps) => {
 
   return (
     <Button
+      width={width}
       disabled={disabled}
       testID={testID}
       activeOpacity={0.8}
