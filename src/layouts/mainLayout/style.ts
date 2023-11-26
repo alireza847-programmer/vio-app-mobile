@@ -1,5 +1,6 @@
 import styled from '@emotion/native';
 import VRow from 'components/uiElements/row';
+import {Platform} from 'react-native';
 import {wp} from 'utils/dimensions';
 
 export const Container = styled.View(({theme}) => ({
@@ -8,7 +9,8 @@ export const Container = styled.View(({theme}) => ({
 
 export const Header = styled(VRow)(({theme}) => ({
   width: wp(100),
-  shadowColor: 'rgba(68, 80, 95, 0.20)',
+  shadowColor:
+    Platform.OS == 'ios' ? 'rgba(68, 80, 95, 0.20)' : 'rgba(68, 80, 95, 0.60)',
   shadowOpacity: 1,
   shadowOffset: {
     height: 0,
