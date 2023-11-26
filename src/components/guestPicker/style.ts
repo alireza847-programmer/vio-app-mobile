@@ -16,5 +16,5 @@ export const ButtonsWrapper = styled.View(({theme}) => ({
 }));
 
 export const Container = styled.View(({theme}) => ({
-  height: Platform.OS === 'android' ? hp(85) : hp(88),
+  height: Platform.OS === 'android' ? hp(83) : hp(88),
 }));
