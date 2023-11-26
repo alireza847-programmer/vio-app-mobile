@@ -1,7 +1,7 @@
 import styled from '@emotion/native';
-import {TextProps} from 'types/components/uiElements/text';
+import {VTextProps} from 'types/components/uiElements/text';
 
-const VText = styled.Text<TextProps>(
+const VText = styled.Text<VTextProps>(
   ({
     theme,
     textAlign = 'center',
@@ -11,6 +11,7 @@ const VText = styled.Text<TextProps>(
     marginLeftRatio = 0,
     fullWidth = false,
     width,
+    minWidth,
   }) => ({
     color: color,
     textAlign: textAlign,
@@ -19,7 +20,8 @@ const VText = styled.Text<TextProps>(
     textAlignVertical: 'center',
     ...(fullWidth && {width: '100%'}),
     ...theme.fonts[typography],
-    ...(width && {width: width}),
+    ...(width && {width}),
+    ...(minWidth && {minWidth}),
   }),
 );
 

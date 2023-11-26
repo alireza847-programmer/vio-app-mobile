@@ -13,7 +13,6 @@ export const Wrapper = styled.View(({theme}) => ({
   backgroundColor: theme.colors.backgroundColor,
   justifyContent: 'center',
   alignItems: 'center',
-  // paddingHorizontal: theme.HorizontalRem * 4,
   borderRadius: theme.radius * 2,
   width: '95%',
 }));

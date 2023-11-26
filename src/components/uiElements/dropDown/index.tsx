@@ -11,7 +11,7 @@ import VButton from '../button';
 import {TouchableOpacity} from 'react-native';
 
 const VDropDown = (props: VDropDownProps) => {
-  const {data, placeHolder, onChange, defaultValue, testID} = props;
+  const {data, placeHolder, onChange, defaultValue, testID, title} = props;
   const [visibleModal, setVisibleModal] = useState(false);
   const [value, setValue] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -33,7 +33,7 @@ const VDropDown = (props: VDropDownProps) => {
       <VModal
         withClose
         withHeader
-        title="Child 1 age"
+        title={title}
         onClose={() => setVisibleModal(false)}
         isVisible={visibleModal}>
         <WheelPicker
@@ -78,7 +78,7 @@ const VDropDown = (props: VDropDownProps) => {
           justifyContent="space-between"
           fullWidth={false}>
           <VText
-            width={theme.HorizontalRem * 10}
+            minWidth={theme.HorizontalRem * 10}
             textAlign="left"
             typography="semiBold16">
             {value}
