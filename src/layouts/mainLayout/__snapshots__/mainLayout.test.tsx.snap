@@ -32,6 +32,7 @@ exports[`MainLayout component snapshot 1`] = `
           {
             "alignItems": "flex-start",
             "backgroundColor": "#fff",
+            "elevation": 10,
             "paddingBottom": 40.019999999999996,
             "paddingTop": 26.68,
             "shadowColor": "rgba(68, 80, 95, 0.20)",
@@ -65,9 +66,87 @@ exports[`MainLayout component snapshot 1`] = `
         ]
       }
     >
-      <SvgMock
-        fill="#0071F3"
-      />
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderColor": "#BFDAF9",
+            "borderRadius": 15,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          fullWidth={false}
+          style={
+            [
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "paddingHorizontal": 0,
+                "paddingVertical": 0,
+              },
+              undefined,
+            ]
+          }
+        >
+          <SvgMock
+            fill="#0071F3"
+          />
+        </View>
+        <Text
+          color="#0071F3"
+          marginTopRatio={0}
+          style={
+            [
+              {
+                "color": "#0071F3",
+                "fontFamily": "Inter-SemiBold",
+                "fontSize": 16,
+                "marginLeft": 0,
+                "marginTop": 0,
+                "textAlign": "center",
+                "textAlignVertical": "center",
+              },
+              undefined,
+            ]
+          }
+          typography="semiBold16"
+        />
+      </View>
     </View>
     <Text
       style={
@@ -152,6 +231,7 @@ exports[`MainLayout component snapshot with close button and custom right icon 1
           {
             "alignItems": "flex-start",
             "backgroundColor": "#fff",
+            "elevation": 10,
             "paddingBottom": 40.019999999999996,
             "paddingTop": 26.68,
             "shadowColor": "rgba(68, 80, 95, 0.20)",
@@ -185,9 +265,87 @@ exports[`MainLayout component snapshot with close button and custom right icon 1
         ]
       }
     >
-      <SvgMock
-        fill="#0071F3"
-      />
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderColor": "#BFDAF9",
+            "borderRadius": 15,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          fullWidth={false}
+          style={
+            [
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "paddingHorizontal": 0,
+                "paddingVertical": 0,
+              },
+              undefined,
+            ]
+          }
+        >
+          <SvgMock
+            fill="#0071F3"
+          />
+        </View>
+        <Text
+          color="#0071F3"
+          marginTopRatio={0}
+          style={
+            [
+              {
+                "color": "#0071F3",
+                "fontFamily": "Inter-SemiBold",
+                "fontSize": 16,
+                "marginLeft": 0,
+                "marginTop": 0,
+                "textAlign": "center",
+                "textAlignVertical": "center",
+              },
+              undefined,
+            ]
+          }
+          typography="semiBold16"
+        />
+      </View>
     </View>
     <Text
       style={
@@ -274,6 +432,7 @@ exports[`MainLayout component snapshot with logo 1`] = `
           {
             "alignItems": "flex-start",
             "backgroundColor": "#fff",
+            "elevation": 10,
             "paddingBottom": 40.019999999999996,
             "paddingTop": 26.68,
             "shadowColor": "rgba(68, 80, 95, 0.20)",
@@ -307,9 +466,87 @@ exports[`MainLayout component snapshot with logo 1`] = `
         ]
       }
     >
-      <SvgMock
-        fill="#0071F3"
-      />
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderColor": "#BFDAF9",
+            "borderRadius": 15,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          fullWidth={false}
+          style={
+            [
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "paddingHorizontal": 0,
+                "paddingVertical": 0,
+              },
+              undefined,
+            ]
+          }
+        >
+          <SvgMock
+            fill="#0071F3"
+          />
+        </View>
+        <Text
+          color="#0071F3"
+          marginTopRatio={0}
+          style={
+            [
+              {
+                "color": "#0071F3",
+                "fontFamily": "Inter-SemiBold",
+                "fontSize": 16,
+                "marginLeft": 0,
+                "marginTop": 0,
+                "textAlign": "center",
+                "textAlignVertical": "center",
+              },
+              undefined,
+            ]
+          }
+          typography="semiBold16"
+        />
+      </View>
     </View>
     <Text
       style={
